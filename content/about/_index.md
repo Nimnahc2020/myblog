@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: 2020-04-02T02:26:35+08:00
-draft: true
 ---
 
+Welcome!
+欢迎来到我的小站！
