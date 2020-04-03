@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://nimnahc2020.github.io/"
-title = "孤蝉 不鸣"
+title = "Nimnahc"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
 pluralizeListTitles = false
 
 # 摘要的字数限制
-summaryLength = 42
+summaryLength = 41
 
 # 是否开启 GitHub 风格的 Emoji 书写方式
 enableEmoji = false
@@ -41,19 +41,20 @@ paginate = 5
 
 # URL 相关
 disablePathToLower = false
-relativeURLs = false
+relativeURLs = true
 uglyURLs = false
 
 # URL 结构
 [permalinks]
     categories = "/categories/:slug/"
     tags = "/tags/:slug/"
+	series = "/series/:slug/"
 
 # 类别
 [taxonomies]
-    category = "categories"
+    #category = "categories"
     tag = "tags"
-
+    series = "series"
 # 修改时间
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
@@ -96,13 +97,13 @@ uglyURLs = false
     # 邮箱
     email = "ruchan1225@gmail.com"
     # 座右铭或简介
-    motto = "Viva La Vida"
+    motto = "Ideas with keeping"
     # 头像
-    avatar = "/icons/favorite.png"
+    avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = ""
+    website = "https://nimnahc2020.github.io/"
     # 推特
-    twitter = "Nimnahc"
+    twitter = ""
 
 # 相关文章
 [related]
@@ -175,43 +176,129 @@ uglyURLs = false
 
 [menu]
     ## 菜单栏
-    #[[menu.main]]
-    #    url = "/home/"
-    #    name = "首页"
-    #    weight = 1
-    #    pre = "internal"
-    #    post = "home"
-    [[menu.main]]
-        url = "/posts/"
-        name = "文章"
-        weight = 2
-        pre = "internal"
-        post = "archive"
+    # [[menu.main]]
+    #     url = "/"
+    #     name = "首页"
+    #     weight = 1
+    #     pre = "internal"
+    #     post = "home"
+    # [[menu.main]]
+    #     url = "/posts/"
+    #     name = "文章"
+    #     weight = 2
+    #     pre = "internal"
+    #     post = "archive"  fa-toggle-down
     [[menu.main]]
         url = "/categories/"
         name = "分类"
-        weight = 3
+        weight = 2
         pre = "internal"
         post = "th"
     [[menu.main]]
         url = "/tags/"
         name = "标签"
-        weight = 4
+        weight = 1
         pre = "internal"
         post = "tags"
-    [[menu.main]]
-        url = "/about/"
-        name = "关于"
-        weight = 5
+	[[menu.main]]
+        url = "/series/"
+        name = "专栏"
+        weight = 3
         pre = "internal"
-        post = "user-circle"
+        post = "grav"
+    # [[menu.main]]
+    #     url = "/about/"
+    #     name = "关于"
+    #     weight = 5
+    #     pre = "internal"
+    #     post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
     [[menu.main]]
         weight = 7
         identifier = "lang-switcher"
+    #[[menu.main]]
+    #    url = "/record/"
+    #    name = "记录"
+    #    weight = 1
+    #    pre = "internal"
+    #    post = "wpexplorer"
+    #    identifier = "record"
+    #[[menu.main]]
+    #    url = "/life/"
+    #    name = "生活"
+    #    weight = 2
+    #    pre = "internal"
+    #    post = "grav"
+    #    identifier = "life"
+    [[menu.main]]
+        url = "/about/"
+        name = "关于"
+        weight = 5
+        pre = "internal"
+        post = "user-circle"
+        identifier = "about"
+	[[menu.main]]
+        url = "/archives/"
+        name = "归档"
+        weight = 4
+        pre = "internal"
+        post = "archive"
 
+    ## 首页的底部链接
+    # [[menu.home]]
+    #     url = "/life/"
+    #     weight = 1
+    #     pre = "internal"
+    #     post = "grav"
+    #     identifier = "life"
+    # [[menu.home]]
+    #     url = "/tech/"
+    #     weight = 2
+    #     pre = "internal"
+    #     post = "wpexplorer"
+    #     identifier = "tech"
+    # [[menu.home]]
+    #     url = "/about/"
+    #     weight = 3
+    #     pre = "internal"
+    #     post = "user-circle"
+    #     identifier = "about"
+
+    ## 社交栏
+    #[[menu.socials]]
+    #    url = "https://github.com/Nimnahc2020"
+    #    name = "GitHub"
+    #    weight = 1
+    #    pre = "external"
+    #[[menu.socials]]
+    #    url = "https://t.me/yixiuer"
+    #    name = "Telegram"
+    #    weight = 2
+    #    pre = "external"
+    #[[menu.socials]]
+    #    url = "https://twitter.com/reuixiy"
+    #    name = "Twitter"
+    #    weight = 3
+    #    pre = "external"
+
+    ## 链接栏
+    [[menu.links]]
+        url = "/"
+        name = "Home"
+        weight = 1
+        pre = "internal"
+    [[menu.links]]
+        url = "/tags/"
+        name = "Tags"
+        weight = 2
+        pre = "internal"		
+    [[menu.links]]
+        url = "/Photos/"
+        name = "Photos"
+        weight = 3
+        pre = "internal"
 
 
 ##########################################
@@ -247,7 +334,7 @@ uglyURLs = false
     # 在窄视图下隐藏菜单栏并显示一个按钮？
     enableNavToggle = true
 
-    navHeight = "10em"
+    navHeight = "9em"
     # 说明：菜单栏展开时的高度
 
 
@@ -264,7 +351,7 @@ uglyURLs = false
     # 如果否，则会使用你的站点标题作为默认值，并
     # 以文字的形式显示，下方可配置字号和字色。字
     # 体请到底部的字体部分配置。单位：em。
-    siteBrandFontSize = 3
+    siteBrandFontSize = 2
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -280,7 +367,7 @@ uglyURLs = false
     # 说明：对弹性布局的顶栏无效
 
     # 是否按文章分区高亮当前菜单项
-    activeInSection = false
+    activeInSection = true
     # 说明：如果开启，那么当某一文章的分区名是某
     #      一菜单项中的 `url` 时，该文章页面中
     #      的该菜单项也会被高亮
@@ -299,7 +386,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = []
+    homePoetry = ["世间为何那么多遗憾？","这是一个婆娑世界，婆娑即遗憾","如果遇到了可爱的人，却又怕不能把握怎么办？","留人间多少爱，迎浮世千重变"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -320,11 +407,11 @@ uglyURLs = false
     # 站点信息
 
     # 站点的 LOGO
-    siteLogo = "/icons/favorite.png"
+    siteLogo = "/icons/apple-touch-icon.png"
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    siteDescription = "Nimnahc's blog"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -333,7 +420,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "Nimnahc"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 
@@ -354,7 +441,7 @@ uglyURLs = false
     # 的树状分类，故如需保留树状分类，建议适应
     # Hugo 的设计理念——分区。
 
-    categoryBy = "categories"
+    categoryBy = "sections"
     # 注意：如果你设置为 `sections`，请务必将
     #      此配置文件中的类别（taxonomies）中
     #      的 `categories` 删除，不然分类页
@@ -386,9 +473,9 @@ uglyURLs = false
     # 字号单位
     fontUnit = "em"
     # 最大字号
-    largestFontSize = 2.5
+    largestFontSize = 3
     # 最小字号
-    smallestFontSize = 1
+    smallestFontSize = 1.5
 
 
     ######################################
@@ -411,15 +498,15 @@ uglyURLs = false
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
-    groupByMonth = true
+    groupByMonth = false
 
     # 是否开启十二生肖
     chineseZodiac = true
 
     # 是否翻译年份（仅对年份标题有效）
-    i18nYear = true
+    i18nYear = false
     # 是否翻译月份（仅对月份标题有效）
-    i18nMonth = true
+    i18nMonth = false
 
 
     ######################################
@@ -441,14 +528,14 @@ uglyURLs = false
     # 说明：分区的名字即站点的 content 目录下
     #      的文件夹的名字。
 
-    # mainSections = ["posts"]
+    mainSections = ["life","tech"]
 
 
     ######################################
     # Atom & RSS
 
     # 是否包括全文内容
-    includeContent = true
+    includeContent = false
     # 说明：如果否，则只会包含文章的摘要。关于摘
     #      要，Hugo 能按你设置的字数限制自动截
     #      取，你也可以在文章中通过
@@ -476,10 +563,10 @@ uglyURLs = false
     hideThemeToggle = false
     # 是否在首页隐藏模式切换开关
     hideThemeToggleInHome = false
-    # 说明：如果开启了深色模式，即使你隐藏了开关，
-    #      你的读者依然可能以深色模式阅读你的博
+    # 说明：如果开启了深色模式，即使你隐
     #      客，如果该读者的系统设置为深色模式的
-    #      话。类似，如果你开启深色模式并将默认
+    #      话。类似，如果你开启深色模式并将默认藏了开关，
+    #      你的读者依然可能以深色模式阅读你的博
     #      模式修改为它，即使你隐藏开关，你的读
     #      者依然可能以浅色模式模式阅读你的博客。
 
@@ -711,7 +798,7 @@ uglyURLs = false
     # 分类的图标
     categoryIcon = "folder"
     # 分类之间的分隔符
-    categoryDelimiter = "/"
+    categoryDelimiter = "›"
 
     # 是否显示字数统计
     displayWordCount = true
@@ -771,7 +858,7 @@ uglyURLs = false
     #      即 h1 到 h6。
 
     # 锚点符号
-    anchorSymbol = "§"
+    anchorSymbol = "#"
     # 说明：锚点图标的优先级高于锚点符号
     #      默认值：§
 
@@ -809,7 +896,7 @@ uglyURLs = false
     enableImageHost = false
 
     # 图片外链地址
-    imageHostURL = "https://example.com/"
+    imageHostURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
     headAlso = false
@@ -830,7 +917,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = "https://example.com/"
+    videoHostURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master/"
 
 
     ######################################
@@ -869,9 +956,9 @@ uglyURLs = false
     # 菜单栏
     fontFamilyMenu = ""
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
-    fontFamilyTitle = "'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyTitle = "'Cinzel Decorative', 'Amstelvar', 'Noto Serif SC', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyHeadings = "'Amstelvar', 'Noto Serif SC', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
     fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
@@ -883,7 +970,7 @@ uglyURLs = false
     # 页脚
     fontFamilyFooter = ""
     # 主体
-    fontFamilyBody = "'EB Garamond', 'Noto Serif SC', serif"
+    fontFamilyBody = "'Amstelvar', 'Noto Serif SC', serif"
 
     # 网络字体链接
     fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -938,7 +1025,7 @@ uglyURLs = false
     ## 首字下沉
 
     # 是否开启（全局设置）
-    enableDropCap = false
+    enableDropCap = true
     # 说明：文章的 Front Matter 中的 `dropCap`
     #      的优先级高于此处
 
@@ -996,7 +1083,7 @@ uglyURLs = false
     enablePostUpdatedBadge = true
 
     # 是否显示（全局设置）
-    displayUpdatedBadge = true
+    displayUpdatedBadge = false
     # 说明：文章的 Front Matter 中的 `badge`
     #      的优先级高于此处
 
@@ -1010,17 +1097,17 @@ uglyURLs = false
     # 文章的 Git 版本信息
 
     # 是否开启
-    enablePostGitInfo = false
+    enablePostGitInfo = true
 
     # 是否显示（全局设置）
-    displayPostGitInfo = false
+    displayPostGitInfo = true
     # 说明：文章的 Front Matter 中的 `gitinfo`
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = ""
+    repoURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io"
     # 编辑地址
-    repoEditURL = ""
+    repoEditURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master"
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1094,7 +1181,7 @@ uglyURLs = false
     # 文章的标签
 
     # 是否开启
-    enablePostTags = true
+    enablePostTags = false
 
     # 标签的图标
     postTagsIcon = "tag"
@@ -1121,14 +1208,14 @@ uglyURLs = false
     # 极简页脚
 
     # 是否开启
-    enableMinimalFooter = false
-    enableVerticalBarStructure = false
+    enableMinimalFooter = true
+    enableVerticalBarStructure = true
     # 说明：如果开启此项，显示在右边的部类或分区
     #      将会包含全部的第一级部类或分区，并且
     #      以竖线（|）分隔开来。
 
     # 是否开启关于页面的极简页脚
-    enableAboutPageMinimalFooter = false
+    enableAboutPageMinimalFooter = true
 
 
     ######################################
@@ -1173,10 +1260,10 @@ uglyURLs = false
     displayPoweredBy = true
 
     # 是否显示站点的版权信息
-    displaySiteCopyright = true
+    displaySiteCopyright = false
 
     # 自定义页脚（支持 Markdown）
-    customFooter = ""
+    customFooter = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)"
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
@@ -1192,7 +1279,7 @@ uglyURLs = false
     # 多语言
 
     # 是否开启多语言按钮
-    enableLangToggle = false
+    enableLangToggle = true
 
     # 是否在首页隐藏多语言按钮
     hideLangToggleInHome = false
@@ -1235,7 +1322,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启
-    enableForceHTTPS = false
+    enableForceHTTPS = true
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可
     #      开启此选项。
@@ -1273,3 +1360,55 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
+
+# 中文
+[languages.zh]
+    languageName = "🇨🇳"
+    contentDir = "content/zh"
+    weight = 1
+
+# 英文
+[languages.en]
+    languageName = "🇺🇸"
+    contentDir = "content/en"
+    weight = 2
+    languageCode = "en-US"
+    hasCJKLanguage = false
+    copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
+[languages.en.taxonomies]
+    # category = "categories"
+    # tag = "tags"
+[languages.en.menu]
+    # [[languages.en.menu.home]]
+    #     url = "/en/about/"
+    #     weight = 3
+    #     pre = "internal"
+    #     post = "user-circle"
+    #     identifier = "about"
+    [[languages.en.menu.main]]
+        url = "/en/about/"
+        name = "about"
+        weight = 1
+        pre = "internal"
+        post = "user-circle"
+        identifier = "about"
+    [[languages.en.menu.main]]
+        weight = 2
+        identifier = "theme-switcher"
+    [[languages.en.menu.main]]
+        weight = 3
+        identifier = "lang-switcher"
+[languages.en.params]
+    homePoetry = ["In the dark night", "Longing for a light of care", "In the daylight", "Desiring for the swallow of a black hole", "Cause curiosity","seeks for what it’s in the darkness","---quote from reuixiy"]
+    siteDescription = "Blog of Nimnahc in English."
+    listDateFormat = "January 2"
+    fontFamilyTitle = "'Amstelvar', serif"
+    fontFamilyHeadings = "'Amstelvar', serif"
+    fontFamilyBody = "'Amstelvar', serif"
+    fontsLink = "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    lineHeight = 1.618
+    enableJustify = false
+    enableSmallCaps = true
+    enableEmphasisPoint = false
+    enableChinesePunctuationGlyphCorrection = false
+    customFooter = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
