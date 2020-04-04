@@ -1,7 +1,7 @@
 .list-title, .term-title, .list-year, .list-month {
     font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
 }
-
+// 弹性布局调整
 .brand {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -92,7 +92,7 @@ hr.coldplay {
     }
 }
 
-
+// 可变字体 https://github.com/TypeNetwork/Amstelvar
 // https://github.com/TypeNetwork/Amstelvar
 
 // Magic adjustment for en
@@ -151,4 +151,59 @@ body {
 
 .list-item-time {
     font-feature-settings: 'tnum';
+}
+
+/* 友链样式 */
+.blogroll {
+    padding: 1em 0;
+    border: 2px solid transparent;
+    border-bottom: 1px dashed var(--color-contrast-low);
+    display: flex;
+}
+.blogroll .friend {
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.blogroll .name {
+    font-weight: bold;
+    margin: 0.375em 0;  
+}
+.blogroll .excerpt {
+    font-size: 0.875em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.blogroll .avatar {
+    width: 4em !important;
+    height: 4em !important;
+    margin: 0 1em 0 0 !important;
+    z-index: 0;
+}
+
+
+.app-refresh {
+    background: #000;
+    height: 0;
+    line-height: 3em;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 42;
+    padding: 0 1em;
+    transition: all .3s ease;
+}
+.app-refresh-wrap {
+    display: flex;
+    color: #fff;
+}
+.app-refresh-wrap label {
+    flex: 1;
+}
+.app-refresh-show {
+    height: 3em;
 }

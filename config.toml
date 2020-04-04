@@ -206,6 +206,12 @@ uglyURLs = false
         weight = 3
         pre = "internal"
         post = "grav"
+	[[menu.main]]
+        url = "/blogroll/"
+        name = "友链"
+        weight = 5
+        pre = "internal"
+        post = "grav"
     # [[menu.main]]
     #     url = "/about/"
     #     name = "关于"
@@ -213,10 +219,10 @@ uglyURLs = false
     #     pre = "internal"
     #     post = "user-circle"
     [[menu.main]]
-        weight = 6
+        weight = 7
         identifier = "theme-switcher"
     [[menu.main]]
-        weight = 7
+        weight = 8
         identifier = "lang-switcher"
     #[[menu.main]]
     #    url = "/record/"
@@ -235,7 +241,7 @@ uglyURLs = false
     [[menu.main]]
         url = "/about/"
         name = "关于"
-        weight = 5
+        weight = 6
         pre = "internal"
         post = "user-circle"
         identifier = "about"
@@ -617,7 +623,7 @@ uglyURLs = false
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableServiceWorker = false
+    enableServiceWorker = true
     # 说明：需要第三方支持，暂见：
     #      https://io-oi.me/tech/pwa-via-workbox/
 
@@ -1105,9 +1111,9 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io"
+    repoURL = "https://github.com/Nimnahc2020/blog"
     # 编辑地址
-    repoEditURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master"
+    repoEditURL = "https://github.com/Nimnahc2020/blog/blob/master"
 
     # Git 的图标
     gitIcon = "code-branch"
