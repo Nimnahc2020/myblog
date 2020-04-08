@@ -1,9 +1,10 @@
 ---
 title: "梦言梦语"
 date: 2020-04-02T11:59:34+08:00
-tags: ["tech","draft"]
+tags: ["Hugo","Draft"]
 series: ["博客搭建"]
 aliases: ["/study/blog/hugo_hexo/"]
+gitinfo: true
 ---
 
 **暗夜中，渴望一束光的关怀；在白天却更渴望黑洞的吞噬：因为好奇心，想看看黑暗中有什么。**

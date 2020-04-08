@@ -31,7 +31,7 @@ enableEmoji = false
 footnoteReturnLinkContents = "↩"
 
 # 是否启用 Git 版本信息
-enableGitInfo = false
+enableGitInfo = true
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
@@ -964,7 +964,7 @@ uglyURLs = false
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
     fontFamilyTitle = "'Cinzel Decorative', 'Amstelvar', 'Noto Serif SC', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'Amstelvar', 'Noto Serif SC', serif"
+    fontFamilyHeadings = "'Noto Serif SC', 'Amstelvar', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
     fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
@@ -974,7 +974,7 @@ uglyURLs = false
     # 说明文字
     fontFamilyCaption = ""
     # 页脚
-    fontFamilyFooter = ""
+    fontFamilyFooter = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 主体
     fontFamilyBody = "'Amstelvar', 'Noto Serif SC', serif"
 
