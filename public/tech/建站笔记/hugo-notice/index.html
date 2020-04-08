@@ -1,17 +1,447 @@
-<!doctype html><html lang=zh-cn data-theme=light><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta charset=utf-8><meta name=generator content="Hugo 0.68.3"><meta name=theme-color content="#fff"><script>const userPrefers=localStorage.getItem('theme');const darkModeMediaQuery=window.matchMedia('(prefers-color-scheme: dark)');const lightModeMediaQuery=window.matchMedia('(prefers-color-scheme: light)');if(userPrefers==='dark'){changeModeMeta('dark');}else if(userPrefers==='light'){changeModeMeta('light');}else if(darkModeMediaQuery.matches){changeModeMeta('dark');}else if(lightModeMediaQuery.matches){changeModeMeta('light');}
-function changeModeMeta(theme){document.documentElement.setAttribute('data-theme',theme);if(theme==='dark'){changeThemeColor('#282a36');}else{changeThemeColor('#fff');}}
-function changeThemeColor(themeColor){document.querySelector('meta[name="theme-color"]').setAttribute('content',themeColor);}</script><script>if(window.location.host=="nimnahc2020.github.io"&&window.location.protocol!="https:"){window.location.protocol="https";}</script><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2,user-scalable=yes"><meta name=format-detection content="telephone=no, date=no, address=no, email=no"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><title>添加插件hugo-notice | Nimnahc</title><link rel=stylesheet href=../../../css/meme.min.e9e67d9cd0a6520da8ad4de5e14d792eed9ebf1c6332517ab726ae17c12ff30a.css integrity="sha256-6eZ9nNCmUg2orU3l4U15Lu2evxxjMlF6tyauF8Ev8wo="><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript><meta name=author content="Nimnahc"><meta name=description content="添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……"><link rel="shortcut icon" href=../../../favicon.ico type=image/x-icon><link rel=mask-icon href=../../../icons/safari-pinned-tab.svg color=#2a6df4><link rel=apple-touch-icon sizes=180x180 href=../../../icons/apple-touch-icon.png><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="Nimnahc"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=mobile-web-app-capable content="yes"><meta name=application-name content="Nimnahc"><meta name=msapplication-starturl content="../../../"><meta name=msapplication-TileColor content="#fff"><meta name=msapplication-TileImage content="../../../icons/mstile-150x150.png"><link rel=manifest href=../../../manifest.json><link rel=canonical href=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","datePublished":"2020-04-08T10:44:02+08:00","dateModified":"2020-04-08T13:10:29+08:00","url":"https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/","headline":"添加插件hugo-notice","description":"添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……","inLanguage":"zh-CN","articleSection":"tech","wordCount":1606,"image":["https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png"],"author":{"@type":"Person","description":"Ideas with keeping","email":"ruchan1225@gmail.com","image":"https://nimnahc2020.github.io/icons/apple-touch-icon.png","url":"https://nimnahc2020.github.io/","name":"Nimnahc"},"license":"[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)","publisher":{"@type":"Organization","name":"Nimnahc","logo":{"@type":"ImageObject","url":"https://nimnahc2020.github.io/icons/apple-touch-icon.png"},"url":"https://nimnahc2020.github.io/"},"mainEntityOfPage":{"@type":"WebSite","@id":"https://nimnahc2020.github.io/"}}</script><meta name=twitter:card content="summary_large_image"><meta property="og:title" content="添加插件hugo-notice"><meta property="og:description" content="添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……"><meta property="og:url" content="https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/"><meta property="og:site_name" content="Nimnahc"><meta property="og:locale" content="zh"><meta property="og:image" content="https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png"><meta property="og:type" content="article"><meta property="article:published_time" content="2020-04-08T10:44:02+08:00"><meta property="article:modified_time" content="2020-04-08T13:10:29+08:00"><meta property="article:section" content="tech"></head><body><div class=container><header class=header data-scroll-header><div class=header-wrapper><div class=header-inner><div class=site-brand><a href=../../../ class=brand>Nimnahc</a></div><nav class=nav><ul class=menu id=menu><li class=menu-item><a href=../../../tags/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon"><path d="M497.941 225.941 286.059 14.059A48 48 0 00252.118.0H48C21.49.0.0 21.49.0 48v204.118a48 48 0 0014.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882.0l204.118-204.118c18.745-18.745 18.745-49.137.0-67.882zM112 160c-26.51.0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882.0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397.0h48.721a48 48 0 0133.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137.0 67.882z"/></svg><span class=menu-item-name>标签</span></a></li><li class=menu-item><a href=../../../categories/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255.0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255.0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255.0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256.0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255.0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255.0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255.0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256.0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255.0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255.0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255.0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255.0-24 10.745-24 24zm386.667-56H488c13.255.0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255.0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255.0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255.0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255.0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255.0-24 10.745-24 24z"/></svg><span class=menu-item-name>分类</span></a></li><li class=menu-item><a href=../../../series/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path d="M301.1 212c4.4 4.4 4.4 11.9.0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6.0l-10.5-10.5c-4.4-4.7-4.4-11.9.0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6.0l10.5 10.8zm-30.2-19.7c3-3 3-7.8.0-10.5-2.8-3-7.5-3-10.5.0-2.8 2.8-2.8 7.5.0 10.5 3.1 2.8 7.8 2.8 10.5.0zm-26 5.3c-3 2.8-3 7.5.0 10.2 2.8 3 7.5 3 10.5.0 2.8-2.8 2.8-7.5.0-10.2-3-3-7.7-3-10.5.0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4.0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4.0.0-4.4-5.8-8-8.9.0.0-13.8.0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4.0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4.0.0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3.0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class=menu-item-name>专栏</span></a></li><li class=menu-item><a href=../../../archives/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7.0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6.0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6.0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3.0 64v48c0 8.8 7.2 16 16 16h480c8.8.0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class=menu-item-name>归档</span></a></li><li class=menu-item><a href=../../../blogroll/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path d="M301.1 212c4.4 4.4 4.4 11.9.0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6.0l-10.5-10.5c-4.4-4.7-4.4-11.9.0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6.0l10.5 10.8zm-30.2-19.7c3-3 3-7.8.0-10.5-2.8-3-7.5-3-10.5.0-2.8 2.8-2.8 7.5.0 10.5 3.1 2.8 7.8 2.8 10.5.0zm-26 5.3c-3 2.8-3 7.5.0 10.2 2.8 3 7.5 3 10.5.0 2.8-2.8 2.8-7.5.0-10.2-3-3-7.7-3-10.5.0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4.0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4.0.0-4.4-5.8-8-8.9.0.0-13.8.0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4.0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4.0.0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3.0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class=menu-item-name>友链</span></a></li><li class=menu-item><a href=../../../about/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6.0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7.0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4.0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9s28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1 42.9.0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class=menu-item-name>关于</span></a></li><li class=menu-item><div id=theme-switcher>🌞</div></li><li class=menu-item><div id=lang-switcher data-hide=true>🇨🇳</div></li></ul></nav></div></div><input type=checkbox id=nav-toggle aria-hidden=true>
-<label for=nav-toggle class=nav-toggle></label><label for=nav-toggle class=nav-curtain></label></header><main class="main single" id=main><div class=main-inner><article class="content post" data-align=justify data-type=tech data-toc-num=true><h1 class=post-title>添加插件hugo-notice</h1><div class=post-meta><time datetime=2020-04-08T10:44:02+08:00 class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6.0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h48c26.5.0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3.0 6-2.7 6-6z"/></svg>&nbsp;2020.4.8</time>
-<time datetime=2020-04-08T13:10:29+08:00 class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M4e2 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627.0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627.0-12 5.373-12 12v52H48C21.49 64 0 85.49.0 112v352c0 26.51 21.49 48 48 48h352c26.51.0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 4e2H54a6 6 0 01-6-6V160h352v298a6 6 0 01-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.4.8</time>
-<span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1606</span>
-<span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5.0-2e2-89.5-2e2-2e2S145.5 56 256 56s2e2 89.5 2e2 2e2-89.5 2e2-2e2 2e2zm61.8-104.4-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6.0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span></div><div class=post-body><p>添加的hugo-notice插件效果如下：</p><style type=text/css>.notice-icon{margin:0 .5em .3em 0}.notice{padding:1em;margin-bottom:1em;border-radius:4px}.notice p:last-child{margin-bottom:0}.notice-title{margin:-1em -1em .75em!important;padding:.25em 1em;border-radius:4px 4px 0 0;font-weight:700;color:#fff}[data-theme=dark] .notice-title{color:#bfbfbf}.notice.notice-warning .notice-title{background:#e06c6c}[data-theme=dark] .notice.notice-warning .notice-title{background:#704343}.notice.notice-warning{background:hsl(0,65%,65%,.15)}[data-theme=dark] .notice.notice-warning{background:hsl(0,25%,35%,.15)}.notice.notice-info .notice-title{background:#f0b375}[data-theme=dark] .notice.notice-info .notice-title{background:#705943}.notice.notice-info{background:hsl(30,80%,70%,.15)}[data-theme=dark] .notice.notice-info{background:hsl(30,25%,35%,.15)}.notice.notice-note .notice-title{background:#6cb9e0}[data-theme=dark] .notice.notice-note .notice-title{background:#436170}.notice.notice-note{background:hsl(200,65%,65%,.15)}[data-theme=dark] .notice.notice-note{background:hsl(200,25%,35%,.15)}.notice.notice-tip .notice-title{background:#6ce092}[data-theme=dark] .notice.notice-tip .notice-title{background:#437052}.notice.notice-tip{background:hsl(140,65%,65%,.15)}[data-theme=dark] .notice.notice-tip{background:hsl(140,25%,35%,.15)}</style><div class="notice notice-warning"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 576 512"><path d="M570 440c18 32-5 72-42 72H48c-37 0-60-40-42-72L246 24c19-32 65-32 84 0l240 416zm-282-86a46 46 0 100 92 46 46 0 000-92zm-44-165 8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/></svg>Warning</p><p>这是notice-warning！😛</p></div><div class="notice notice-info"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v1e2h12c7 0 12 5 12 12v24z"/></svg>Info</p><p>这是notice-info！😝</p></div><div class="notice notice-tip"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/></svg>Tip</p><p>这是notice-tip！😜</p></div><div class="notice notice-note"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165 8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/></svg>Note</p><p>这是notice-note！🤪</p></div><hr><p>接下来就是展现添加这款插件的方法了！</p><p>首先了解 Hugo<a href=https://gohugo.io/hugo-modules/theme-components/ target=_blank rel=noopener>主题组件</a>。
-通过主题组件你可以在 Hugo 中同时使用多款主题，这样的好处是你可以添加别人写好的一些<a href=https://gohugo.io/content-management/shortcodes/ target=_blank rel=noopener>短代码</a>，
-如此便把短代码所具有的功能添加到你的博客中。<a href=https://github.com/martignoni/hugo-notice target=_blank rel=noopener>hugo-notice</a> 便是这样的一个主题组件。</p><p>然而，我并非是使用这种方法添加的 hugo-notice 插件。🙃</p><p>亲身实践：进入 <a href=https://github.com/martignoni/hugo-notice target=_blank rel=noopener>hugo-notice</a>，按照提示在根目录下执行 <code>git submodule add https://github.com/martignoni/hugo-notice.git themes/hugo-notice</code>。然后 themes 文件夹中便出现了 hugo-notice 主题，接着再根据提示把站点配置文件<code>config.yaml</code>（或则是<code>config.toml</code>)中有关 theme 一项加上该主题<code>hugo-notice</code>。</p><p>Example, with <code>config.toml</code>:</p><pre><code>theme = [&quot;hugo-notice&quot;, &quot;your-theme&quot;]
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.68.3" /><meta name="theme-color" content="#fff" />
+        <script>
+            const userPrefers = localStorage.getItem('theme');
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            if (userPrefers === 'dark') {
+                changeModeMeta('dark');
+            } else if (userPrefers === 'light') {
+                changeModeMeta('light');
+            } else if (darkModeMediaQuery.matches) {
+                changeModeMeta('dark');
+            } else if (lightModeMediaQuery.matches) {
+                changeModeMeta('light');
+            }
+            function changeModeMeta(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                if (theme === 'dark') {
+                    changeThemeColor('#282a36');
+                } else {
+                    changeThemeColor('#fff');
+                }
+            }
+            function changeThemeColor(themeColor) {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
+            }
+        </script>
+
+    
+        
+        
+        <script>
+            if (window.location.host == "nimnahc2020.github.io" && window.location.protocol != "https:") {
+                window.location.protocol = "https";
+            }
+        </script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>添加插件hugo-notice | Nimnahc</title>
+
+    <link rel="stylesheet" href="../../../css/meme.min.e9e67d9cd0a6520da8ad4de5e14d792eed9ebf1c6332517ab726ae17c12ff30a.css" integrity="sha256-6eZ9nNCmUg2orU3l4U15Lu2evxxjMlF6tyauF8Ev8wo=" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Nimnahc" />
+    
+    
+    <meta name="description" content="添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……" />
+
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="../../../icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Nimnahc" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Nimnahc" />
+    <meta name="msapplication-starturl" content="../../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="../../../manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/" />
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-04-08T10:44:02+08:00",
+        "dateModified": "2020-04-08T13:10:29+08:00",
+        "url": "https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/",
+        "headline": "添加插件hugo-notice",
+        "description": "添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "tech",
+        "wordCount":  1606 ,
+        "image": ["https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png"],
+        "author": {
+            "@type": "Person",
+            "description": "Ideas with keeping",
+            "email": "ruchan1225@gmail.com",
+            "image": "https://nimnahc2020.github.io/icons/apple-touch-icon.png",
+            "url": "https://nimnahc2020.github.io/",
+            "name": "Nimnahc"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Nimnahc",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://nimnahc2020.github.io/icons/apple-touch-icon.png"
+            },
+            "url": "https://nimnahc2020.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://nimnahc2020.github.io/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+
+
+<meta property="og:title" content="添加插件hugo-notice" />
+<meta property="og:description" content="添加的hugo-notice插件效果如下： .notice-icon { margin: 0 0.5em 0.3em 0; } .notice { padding: 1em; margin-bottom: 1em; border-radius: 4px; } .notice p:last-child {……" />
+<meta property="og:url" content="https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/" />
+<meta property="og:site_name" content="Nimnahc" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-04-08T10:44:02+08:00" />
+    <meta property="article:modified_time" content="2020-04-08T13:10:29+08:00" />
+    
+    <meta property="article:section" content="tech" />
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner">
+                    
+    <div class="site-brand">
+        
+            <a href="../../../" class="brand">Nimnahc</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="../../../tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon "><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon "><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../series/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon "><path d="M301.1 212c4.4 4.4 4.4 11.9 0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6 0l-10.5-10.5c-4.4-4.7-4.4-11.9 0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6 0l10.5 10.8zm-30.2-19.7c3-3 3-7.8 0-10.5-2.8-3-7.5-3-10.5 0-2.8 2.8-2.8 7.5 0 10.5 3.1 2.8 7.8 2.8 10.5 0zm-26 5.3c-3 2.8-3 7.5 0 10.2 2.8 3 7.5 3 10.5 0 2.8-2.8 2.8-7.5 0-10.2-3-3-7.7-3-10.5 0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4 0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4 0 0-4.4-5.8-8-8.9 0 0-13.8 0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4 0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4 0 0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3 0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class="menu-item-name">专栏</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../archives/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon "><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">归档</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../blogroll/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon "><path d="M301.1 212c4.4 4.4 4.4 11.9 0 16.3l-9.7 9.7c-4.4 4.7-11.9 4.7-16.6 0l-10.5-10.5c-4.4-4.7-4.4-11.9 0-16.6l9.7-9.7c4.4-4.4 11.9-4.4 16.6 0l10.5 10.8zm-30.2-19.7c3-3 3-7.8 0-10.5-2.8-3-7.5-3-10.5 0-2.8 2.8-2.8 7.5 0 10.5 3.1 2.8 7.8 2.8 10.5 0zm-26 5.3c-3 2.8-3 7.5 0 10.2 2.8 3 7.5 3 10.5 0 2.8-2.8 2.8-7.5 0-10.2-3-3-7.7-3-10.5 0zm72.5-13.3c-19.9-14.4-33.8-43.2-11.9-68.1 21.6-24.9 40.7-17.2 59.8.8 11.9 11.3 29.3 24.9 17.2 48.2-12.5 23.5-45.1 33.2-65.1 19.1zm47.7-44.5c-8.9-10-23.3 6.9-15.5 16.1 7.4 9 32.1 2.4 15.5-16.1zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-66.2 42.6c2.5-16.1-20.2-16.6-25.2-25.7-13.6-24.1-27.7-36.8-54.5-30.4 11.6-8 23.5-6.1 23.5-6.1.3-6.4 0-13-9.4-24.9 3.9-12.5.3-22.4.3-22.4 15.5-8.6 26.8-24.4 29.1-43.2 3.6-31-18.8-59.2-49.8-62.8-22.1-2.5-43.7 7.7-54.3 25.7-23.2 40.1 1.4 70.9 22.4 81.4-14.4-1.4-34.3-11.9-40.1-34.3-6.6-25.7 2.8-49.8 8.9-61.4 0 0-4.4-5.8-8-8.9 0 0-13.8 0-24.6 5.3 11.9-15.2 25.2-14.4 25.2-14.4 0-6.4-.6-14.9-3.6-21.6-5.4-11-23.8-12.9-31.7 2.8.1-.2.3-.4.4-.5-5 11.9-1.1 55.9 16.9 87.2-2.5 1.4-9.1 6.1-13 10-21.6 9.7-56.2 60.3-56.2 60.3-28.2 10.8-77.2 50.9-70.6 79.7.3 3 1.4 5.5 3 7.5-2.8 2.2-5.5 5-8.3 8.3-11.9 13.8-5.3 35.2 17.7 24.4 15.8-7.2 29.6-20.2 36.3-30.4 0 0-5.5-5-16.3-4.4 27.7-6.6 34.3-9.4 46.2-9.1 8 3.9 8-34.3 8-34.3 0-14.7-2.2-31-11.1-41.5 12.5 12.2 29.1 32.7 28 60.6-.8 18.3-15.2 23-15.2 23-9.1 16.6-43.2 65.9-30.4 106 0 0-9.7-14.9-10.2-22.1-17.4 19.4-46.5 52.3-24.6 64.5 26.6 14.7 108.8-88.6 126.2-142.3 34.6-20.8 55.4-47.3 63.9-65 22 43.5 95.3 94.5 101.1 59z"/></svg><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+                    <li class="menu-item">
+                        
+    
+        
+            
+        
+        <div id="theme-switcher">🌞</div>
+    
+
+
+                    </li>
+                
+            
+        
+            
+                
+                    
+                        <li class="menu-item">
+                            <div id="lang-switcher" data-hide="true">
+        🇨🇳
+        
+            
+        
+    </div>
+
+
+                        </li>
+                    
+                
+            
+        
+    </ul>
+</nav>
+
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="tech" data-toc-num="true">
+
+            <h1 class="post-title">添加插件hugo-notice</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-04-08T10:44:02+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.4.8</time>
+    
+    
+        
+        <time datetime="2020-04-08T13:10:29+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.4.8</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1606</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            <div class="post-body"><p>添加的hugo-notice插件效果如下：</p>
+
+<style type="text/css">
+    .notice-icon {
+        margin: 0 0.5em 0.3em 0;
+    }
+    
+    .notice {
+        padding: 1em;
+        margin-bottom: 1em;
+        border-radius: 4px;
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0;
+    }
+
+    .notice-title {
+        margin: -1em -1em 0.75em !important;
+        padding: 0.25em 1em;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+    }
+
+    [data-theme="dark"] .notice-title {
+        color: hsl(0, 0%, 75%);
+    }
+
+    .notice.notice-warning .notice-title {
+        background: hsl(0, 65%, 65%);
+    }
+
+    [data-theme="dark"] .notice.notice-warning .notice-title {
+        background: hsl(0, 25%, 35%);
+    }
+
+    .notice.notice-warning {
+        background: hsl(0, 65%, 65%, 0.15);
+    }
+
+    [data-theme="dark"] .notice.notice-warning {
+        background: hsl(0, 25%, 35%, 0.15);
+    }
+
+    .notice.notice-info .notice-title {
+        background: hsl(30, 80%, 70%);
+    }
+
+    [data-theme="dark"] .notice.notice-info .notice-title {
+        background: hsl(30, 25%, 35%);
+    }
+
+    .notice.notice-info {
+        background: hsl(30, 80%, 70%, 0.15);
+    }
+
+    [data-theme="dark"] .notice.notice-info {
+        background: hsl(30, 25%, 35%, 0.15);
+    }
+
+    .notice.notice-note .notice-title {
+        background: hsl(200, 65%, 65%);
+    }
+
+    [data-theme="dark"] .notice.notice-note .notice-title {
+        background: hsl(200, 25%, 35%);
+    }
+
+    .notice.notice-note {
+        background: hsl(200, 65%, 65%, 0.15);
+    }
+
+    [data-theme="dark"] .notice.notice-note {
+        background: hsl(200, 25%, 35%, 0.15);
+    }
+
+    .notice.notice-tip .notice-title {
+        background: hsl(140, 65%, 65%);
+    }
+
+    [data-theme="dark"] .notice.notice-tip .notice-title {
+        background: hsl(140, 25%, 35%);
+    }
+
+    .notice.notice-tip {
+        background: hsl(140, 65%, 65%, 0.15);
+    }
+
+    [data-theme="dark"] .notice.notice-tip {
+        background: hsl(140, 25%, 35%, 0.15);
+    }
+</style>
+<div class="notice notice-warning" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 576 512"><path d="M570 440c18 32-5 72-42 72H48c-37 0-60-40-42-72L246 24c19-32 65-32 84 0l240 416zm-282-86a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/></svg>Warning</p><p>这是notice-warning！😛</p></div>   
+
+
+<div class="notice notice-info" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z"/></svg>Info</p><p>这是notice-info！😝</p></div>   
+
+
+<div class="notice notice-tip" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/></svg>Tip</p><p>这是notice-tip！😜</p></div>   
+
+
+<div class="notice notice-note" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/></svg>Note</p><p>这是notice-note！🤪</p></div>   
+<hr>
+<p>接下来就是展现添加这款插件的方法了！</p>
+<p>首先了解 Hugo<a href="https://gohugo.io/hugo-modules/theme-components/" target="_blank" rel="noopener">主题组件</a>。
+通过主题组件你可以在 Hugo 中同时使用多款主题，这样的好处是你可以添加别人写好的一些<a href="https://gohugo.io/content-management/shortcodes/" target="_blank" rel="noopener">短代码</a>，
+如此便把短代码所具有的功能添加到你的博客中。<a href="https://github.com/martignoni/hugo-notice" target="_blank" rel="noopener">hugo-notice</a> 便是这样的一个主题组件。</p>
+<p>然而，我并非是使用这种方法添加的 hugo-notice 插件。🙃</p>
+<p>亲身实践：进入 <a href="https://github.com/martignoni/hugo-notice" target="_blank" rel="noopener">hugo-notice</a>，按照提示在根目录下执行 <code>git submodule add https://github.com/martignoni/hugo-notice.git themes/hugo-notice</code>。然后 themes 文件夹中便出现了 hugo-notice 主题，接着再根据提示把站点配置文件<code>config.yaml</code>（或则是<code>config.toml</code>)中有关 theme 一项加上该主题<code>hugo-notice</code>。</p>
+<p>Example, with <code>config.toml</code>:</p>
+<pre><code>theme = [&quot;hugo-notice&quot;, &quot;your-theme&quot;]
 </code></pre><p>执行上述步骤后的确能使用该插件，但是效果不尽人意（和它在页面上贴出来的效果相差甚远）😂。
-而我发现<a href=https://guanqr.com/ target=_blank rel=noopener>荷戟独彷徨</a>大佬的文章中使用该标签插件的效果的确很好，于是我打开控制台，发现我博客 notice 部分相较来说少了些东西，进入 hugo-notice 中的 notice.html 查看，发现安装的插件配置有些问题，我尝试改了一下，但由于是小白，很快就放弃了😶。
-于是我便前往大佬的 github 仓库找相关文件配置，几番搜寻下，终于找到有关文件。小白就需要这样的大佬😁！</p><p>总结步骤如下：（我使用的为 meme 主题，其它主题按原理操作即可）<div class="notice notice-tip"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/></svg>Tip</p><p>Hugo 有个特点:<em class=emphasis-point>灵活</em>，你可以直接在根目录下命名有关文件，加入相关内容来自定义相应布局模板，而不用去修改主题的配置文件。</p></div>先在站点目录中的 layouts 下新建 shortcodes文件夹,再放入<code>align.html</code>以及<code>notice.html</code>两个文件。</p><p><code>align.html</code>内容：</p><pre><code>&lt;!--repalce custom content to hugo shortcode--&gt;
+而我发现<a href="https://guanqr.com/" target="_blank" rel="noopener">荷戟独彷徨</a>大佬的文章中使用该标签插件的效果的确很好，于是我打开控制台，发现我博客 notice 部分相较来说少了些东西，进入 hugo-notice 中的 notice.html 查看，发现安装的插件配置有些问题，我尝试改了一下，但由于是小白，很快就放弃了😶。
+于是我便前往大佬的 github 仓库找相关文件配置，几番搜寻下，终于找到有关文件。小白就需要这样的大佬😁！</p>
+<p>总结步骤如下：（我使用的为 meme 主题，其它主题按原理操作即可）
+
+
+<div class="notice notice-tip" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/></svg>Tip</p><p>Hugo 有个特点:<em class="emphasis-point">灵活</em>，你可以直接在根目录下命名有关文件，加入相关内容来自定义相应布局模板，而不用去修改主题的配置文件。</p></div>   
+先在站点目录中的 layouts 下新建 shortcodes文件夹,再放入<code>align.html</code>以及<code>notice.html</code>两个文件。</p>
+<p><code>align.html</code>内容：</p>
+<pre><code>&lt;!--repalce custom content to hugo shortcode--&gt;
 &lt;p style=&quot;text-align:{{ index .Params 0 }}&quot;&gt;{{ index .Params 1 | markdownify }}&lt;/p&gt;
-</code></pre><p><code>notice.html</code>内容：</p><pre><code>&lt;!--https://github.com/martignoni/hugo-notice--&gt;
+</code></pre><p><code>notice.html</code>内容：</p>
+<pre><code>&lt;!--https://github.com/martignoni/hugo-notice--&gt;
 &lt;!--change notice color--&gt;
 {{- $noticeType := .Get 0 -}}
 
@@ -123,7 +553,8 @@ function changeThemeColor(themeColor){document.querySelector('meta[name="theme-c
     {{- if or $block (not $raw) }}{{ $raw }}{{ else }}&lt;p&gt;{{ $raw }}&lt;/p&gt;{{ end -}}
 &lt;/div&gt;   
 </code></pre><p>再进入根目录下的 i18n 文件夹（没有即可新建），放入<code>zh.toml</code>，若开启了多语言站点，如英语，可继续放入<code>en.toml</code>。
-两文件内容均为：</p><pre><code>[notice-warning]
+两文件内容均为：</p>
+<pre><code>[notice-warning]
 other = &quot;Warning&quot;
 
 [notice-note]
@@ -134,12 +565,282 @@ other = &quot;Info&quot;
 
 [notice-tip]
 other = &quot;Tip&quot;
-</code></pre><p>最后前往 data 文件夹，加入<code>SVG.toml</code>（已有即可直接加入下述代码）。<code>SVG.toml</code>内容：</p><pre><code># Notice Icon
+</code></pre><p>最后前往 data 文件夹，加入<code>SVG.toml</code>（已有即可直接加入下述代码）。<code>SVG.toml</code>内容：</p>
+<pre><code># Notice Icon
 notice-warning = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot; viewBox=&quot;0 0 576 512&quot;&gt;&lt;path d=&quot;M570 440c18 32-5 72-42 72H48c-37 0-60-40-42-72L246 24c19-32 65-32 84 0l240 416zm-282-86a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z&quot;/&gt;&lt;/svg&gt;'
 notice-info = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z&quot;/&gt;&lt;/svg&gt;'
 notice-note = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z&quot;/&gt;&lt;/svg&gt;'
 notice-tip = '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z&quot;/&gt;&lt;/svg&gt;'
-</code></pre><div class="notice notice-info"><p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v1e2h12c7 0 12 5 12 12v24z"/></svg>Info</p><p>然后该插件即可正常使用！😝</p></div><p>使用时加上下述相应代码(文本内容自行修改)即可：</p><p><img src=../../../images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png alt=代码截图><span class=caption>◎ 截图</span></p><p>发现我只要输入上图相应代码，无论是否放在代码块中，都会被转化😹。于是便只放了张图。</p></div></article><div class=post-share><div class=share-items><div class="share-item twitter"><a href="https://twitter.com/share?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&text=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&via=" title=分享到「Twitter」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></div><div class="share-item facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/" title=分享到「Facebook」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></div><div class="share-item linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&source=Nimnahc" title=分享到「LinkedIn」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg></a></div><div class="share-item telegram"><a href="https://t.me/share/url?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&text=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice" title=分享到「Telegram」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a></div><div class="share-item weibo"><a href="https://service.weibo.com/share/share.php?&url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&pic=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&searchPic=false" title=分享到「新浪微博」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7.0 395.3.0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a></div><div class="share-item douban"><a href="https://www.douban.com/share/service?href=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&name=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&text=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6" title=分享到「豆瓣」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952.0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03z"/></svg></a></div><div class="share-item qq"><a href="https://connect.qq.com/widget/shareqq/index.html?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&pics=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&site=Nimnahc" title=分享到「QQ」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741.0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792.0.0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a></div><div class="share-item qzone"><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&pics=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&site=Nimnahc" title="分享到「QQ 空间」" target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532s-.251.051-.349.238c-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477.0 00.125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061.201.061.201.061 6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463.0 00.159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5.0 012.861-2.155c1.285-.968 3.559-2.47 3.559-2.731.0-.285-2.144-.781-4.037-.781-1.945.0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276.0.342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688.0.342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477.0 00.127-.449z"/></svg></a></div><div class="share-item qrcode"><div class=qrcode-container title=通过「二维码」><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id=qrcode-img></div></div><script src=https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js></script><script>var typeNumber=0;var errorCorrectionLevel='L';var qr=qrcode(typeNumber,errorCorrectionLevel);qr.addData('https:\/\/nimnahc2020.github.io\/tech\/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0\/hugo-notice\/');qr.make();document.getElementById('qrcode-img').innerHTML=qr.createImgTag();</script></div></div></div><div class=related-posts><h2 class=related-title>相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6.0-12-5.4-12-12v-92h-92c-6.6.0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6.0 12 5.4 12 12v92h92c6.6.0 12 5.4 12 12v56z"/></svg></h2><ul class=related-list><li class=related-item><a href=../../../tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo_hexo/ class=related-link>梦言梦语</a></li></ul></div><footer class=minimal-footer><div class=post-tag><a href=../../../tags/hugo/ rel=tag class=post-tag-link>#hugo</a></div><div class=post-category><a href=../../../tech/ class="post-category-link active">科学技术</a> | <a href=../../../life/ class=post-category-link>生活杂谈</a></div></footer><ul class=post-nav><li class=post-nav-next><a href=../../../tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo_hexo/ rel=next>梦言梦语 ></a></li></ul></div></main><div id=back-to-top class=back-to-top><a href=#><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6.0-33.9L207 39c9.4-9.4 24.6-9.4 33.9.0l194.3 194.3c9.4 9.4 9.4 24.6.0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3.0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a></div><footer id=footer class=footer><div class=footer-inner><div class=site-info>©&nbsp;2020–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3.0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Nimnahc</div><div class=powered-by>Powered by <a href=https://github.com/gohugoio/hugo target=_blank rel=noopener>Hugo</a> | Theme is <a href=https://github.com/reuixiy/hugo-theme-meme target=_blank rel=noopener>MemE</a></div><div class=custom-footer><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a></div></div></footer></div><script src=../../../js/meme.min.f655fa7eaa1cf26e0c17d95d52631f5e4e9bec55b7e72acfcf06028a4ccb13f1.js integrity="sha256-9lX6fqoc8m4MF9ldUmMfXk6b7FW35yrPzwYCikzLE/E="></script><script src=https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js></script><script>var scroll=new SmoothScroll('a[href*="#"]',{speedAsDuration:true,header:'[data-scroll-header]'});</script><script src=https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js></script><script>mediumZoom(document.querySelectorAll('div.post-body img'),{background:'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'})</script><script src=https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js type=module defer></script><div class=app-refresh id=app-refresh><div class=app-refresh-wrap onclick=location.reload()><label>已更新最新版本</label>
-<span>点击刷新</span></div></div><script>if('serviceWorker'in navigator){if(navigator.serviceWorker.controller){navigator.serviceWorker.addEventListener('controllerchange',function(){showNotification();});}
-window.addEventListener('load',function(){navigator.serviceWorker.register('../../../sw.js');});}
-function showNotification(){document.querySelector('meta[name=theme-color]').content='#000';document.getElementById('app-refresh').className+=' app-refresh-show';}</script></body></html>
+</code></pre>
+
+<div class="notice notice-info" >
+    <p class="first notice-title"><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z"/></svg>Info</p><p>然后该插件即可正常使用！😝</p></div>   
+<p>使用时加上下述相应代码(文本内容自行修改)即可：</p>
+<p><img src="../../../images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png" alt="代码截图"><span class="caption">◎ 截图</span></p>
+<p>发现我只要输入上图相应代码，无论是否放在代码块中，都会被转化😹。于是便只放了张图。</p>
+</div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+        
+    
+
+
+        
+    
+    
+
+<div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+                
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;text=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;via=" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item facebook">
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item linkedin">
+                    
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&amp;source=Nimnahc" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item telegram">
+                    
+                    <a href="https://t.me/share/url?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;text=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;pic=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;name=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;text=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item qq">
+                    
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&amp;pics=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&amp;site=Nimnahc" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item qzone">
+                    
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://nimnahc2020.github.io/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo-notice/&amp;title=%e6%b7%bb%e5%8a%a0%e6%8f%92%e4%bb%b6hugo-notice&amp;summary=%e6%b7%bb%e5%8a%a0%e7%9a%84hugo-notice%e6%8f%92%e4%bb%b6%e6%95%88%e6%9e%9c%e5%a6%82%e4%b8%8b%ef%bc%9a%20.notice-icon%20%7b%20margin:%200%200.5em%200.3em%200;%20%7d%20.notice%20%7b%20padding:%201em;%20margin-bottom:%201em;%20border-radius:%204px;%20%7d%20.notice%20p:last-child%20%7b%e2%80%a6%e2%80%a6&amp;pics=https://nimnahc2020.github.io/images/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hexo-notice.png&amp;site=Nimnahc" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                </div>
+            
+
+            
+                
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/nimnahc2020.github.io\/tech\/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0\/hugo-notice\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="../../../tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo_hexo/" class="related-link">梦言梦语</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+
+        
+    <footer class="minimal-footer">
+        
+            
+            <div class="post-tag"><a href="../../../tags/hugo/" rel="tag" class="post-tag-link">#hugo</a></div>
+        
+        
+            <div class="post-category">
+                <a href="../../../tech/" class="post-category-link active">科学技术</a> | <a href="../../../life/" class="post-category-link">生活杂谈</a>
+            </div>
+        
+        
+    </footer>
+
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="../../../tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/hugo_hexo/" rel="next">梦言梦语 ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+
+    </div>
+	
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner"><div class="site-info">©&nbsp;2020–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Nimnahc</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="custom-footer"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        <script src="../../../js/meme.min.f655fa7eaa1cf26e0c17d95d52631f5e4e9bec55b7e72acfcf06028a4ccb13f1.js" integrity="sha256-9lX6fqoc8m4MF9ldUmMfXk6b7FW35yrPzwYCikzLE/E="></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+    <div class="app-refresh" id="app-refresh">
+        <div class="app-refresh-wrap" onclick="location.reload()">
+            <label>已更新最新版本</label>
+            <span>点击刷新</span>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.addEventListener('controllerchange', function() {
+                    showNotification();
+                });
+            }
+
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('../../../sw.js');
+            });
+        }
+
+        function showNotification() {
+            document.querySelector('meta[name=theme-color]').content = '#000';
+            document.getElementById('app-refresh').className += ' app-refresh-show';
+        }
+    </script>
+
+
+
+
+
+
+
+    </body>
+</html>
