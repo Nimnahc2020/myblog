@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://nimnahc2020.github.io/"
+baseURL = "https://crcrc.me/"
 title = "Nimnahc"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -101,7 +101,7 @@ uglyURLs = false
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = "https://nimnahc2020.github.io/"
+    website = "https://crcrc.me/"
     # 推特
     twitter = ""
 
