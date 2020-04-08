@@ -1111,9 +1111,9 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = "https://github.com/Nimnahc2020/blog"
+    repoURL = "https://github.com/Nimnahc2020/myblog"
     # 编辑地址
-    repoEditURL = "https://github.com/Nimnahc2020/blog/blob/master"
+    repoEditURL = "https://github.com/Nimnahc2020/myblog/blob/master"
 
     # Git 的图标
     gitIcon = "code-branch"
