@@ -4,7 +4,6 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "fsevents": "^0.1.0",
     "gulp": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "readable-stream": "^3.6.0",
