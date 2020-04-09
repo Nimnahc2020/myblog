@@ -479,7 +479,7 @@ uglyURLs = false
     # 字号单位
     fontUnit = "em"
     # 最大字号
-    largestFontSize = 3
+    largestFontSize = 2.5
     # 最小字号
     smallestFontSize = 1.5
 
