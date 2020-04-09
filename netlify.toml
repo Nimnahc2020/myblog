@@ -6,3 +6,13 @@
   HUGO_VERSION = "0.68.3"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+  
+[context.production]
+  command = "npm run build"
+  
+[[redirects]]
+  from = "https://nimnahc.netlify.com/*"
+  to = "https://crcrc.me/:splat"
+  force = true
+  
+  
