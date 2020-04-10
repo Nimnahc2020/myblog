@@ -1,13 +1,13 @@
 [[blogroll]]
   name = "荷戟独彷徨"
   url = "https://guanqr.com"
-  avatar = "https://guanqr.com/icons/android-chrome-512x512.png"
+  avatar = "/images/友链/guanqr.png"
   description = "The Sound of Silence"
   weight = 1
 
 [[blogroll]]
   name = "reuixiy"
   url = "https://io-oi.me/"
-  avatar = "/images/reuixiy.png"
+  avatar = "/images/友链/reuixiy.png"
   description = "VIAVA IA VIDA"
   weight = 2
