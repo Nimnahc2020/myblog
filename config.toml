@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
 pluralizeListTitles = false
 
 # 摘要的字数限制
-summaryLength = 41
+summaryLength = 30
 
 # 是否开启 GitHub 风格的 Emoji 书写方式
 enableEmoji = false
@@ -496,7 +496,7 @@ uglyURLs = false
     displayListTitle = true
 
     # 日期的格式
-    listDateFormat = "1 月 2 日"
+    listDateFormat = "2006-01-02"
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
@@ -670,7 +670,7 @@ uglyURLs = false
 
     ## Disqus
     enableDisqus = false
-    disqusShortname = ""
+    disqusShortname = "Nimnahc"
 
     ## Valine
     enableValine = false
@@ -804,7 +804,7 @@ uglyURLs = false
     # 分类的图标
     categoryIcon = "folder"
     # 分类之间的分隔符
-    categoryDelimiter = "›"
+    categoryDelimiter = "/"
 
     # 是否显示字数统计
     displayWordCount = true
@@ -902,7 +902,7 @@ uglyURLs = false
     enableImageHost = false
 
     # 图片外链地址
-    imageHostURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master/"
+    imageHostURL = "https://example.com/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
     headAlso = false
@@ -923,7 +923,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = "https://github.com/Nimnahc2020/Nimnahc2020.github.io/blob/master/"
+    videoHostURL = "https://example.com/"
 
 
     ######################################
@@ -964,11 +964,11 @@ uglyURLs = false
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
     fontFamilyTitle = "'Cinzel Decorative', 'Amstelvar', 'Noto Serif SC', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'Noto Serif SC', 'Amstelvar', serif"
+    fontFamilyHeadings = "'Amstelvar', 'Noto Serif SC', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
     fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
-    fontFamilyQuote = ""
+    fontFamilyQuote = "'Amstelvar', 'Noto Serif SC', serif"
     # 文章目录
     fontFamilyTOC = ""
     # 说明文字

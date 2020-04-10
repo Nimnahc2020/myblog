@@ -8,7 +8,7 @@
         margin: 0;
     }
     &::before {
-        background-image: url(../images/quote-l.svg);
+        background-image: url(../images/引用/quote-l.svg);
         background-position: 0 -6px;
         border-top: 1px solid var(--color-contrast-low);
         background-repeat: no-repeat;
@@ -19,7 +19,7 @@
         opacity: .2;
     }
     &::after {
-        background-image: url(../images/quote-r.svg);
+        background-image: url(../images/引用/quote-r.svg);
         background-position: 100% 6px;
         border-bottom: 1px solid var(--color-contrast-low);
         background-repeat: no-repeat;
@@ -95,15 +95,43 @@
     letter-spacing: -0.07em;
 }
 
-// 段落样式
-
+//段落样式
 .post-body {
     h2 {
         border-bottom: 1px solid var(--color-contrast-lower);
+        transition: all .5s;
     }
     h3 {
         border-bottom: 1px dotted var(--color-contrast-lower);
+        transition: all .5s;
     }
+}
+
+// 删除线
+
+del {
+    --color: var(--color-contrast-medium);
+    text-decoration: none;
+    padding: 0.5em;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to left,rgba(255,255,255,0.5),transparent),linear-gradient(2deg,var(--color) 50%,transparent 50%),linear-gradient(-.9deg,var(--color) 50%,transparent 50%),linear-gradient(-60deg,var(--color) 50%,transparent 50%),linear-gradient(120deg,var(--color) 50%,transparent 50%);
+    background-size: 0% 1.5px, calc(100% - 20px) 10px, calc(100% - 20px) 10px, 10px 10px, 8px 8px;
+    background-position: 100% calc(50% + 2px), center center, center center, 2px 50%, calc(100% - 3px) calc(50% + 1px);
+}
+
+// 文中超链接
+
+.post-body a  {
+    text-decoration-color: var(--color-contrast-high);
+    &:hover {
+        text-decoration-color: var(--color-primary);
+    }
+}
+
+// katex
+
+.katex {
+    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
 
 
