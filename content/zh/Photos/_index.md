@@ -54,7 +54,7 @@ Welcome！！！
 
 ---
 
-![旅游](https://pic3.zhimg.com/v2-9d98f792843fcbcf9cc9c70dc8c64d8a_b.jpg)
+![旅游](/images/旅游/15.jpg)
 
 ---
 
