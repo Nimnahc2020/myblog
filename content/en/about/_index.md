@@ -1,15 +1,22 @@
 ---
 title: "About"
 date: 2020-04-02T21:30:47+08:00
+displayCopyright: false
+dropCap: false
+gitinfo: false
 ---
 
+<blockquote class="quote-center">
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;Tis your bright and tiny spark! 
 
-&ensp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;  Lights the traveler in the dark!
+Tis your bright and tiny spark! 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;     Though I know not what you are!
+Lights the traveler in the dark!
 
-&emsp;&ensp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&emsp;&emsp; &ensp;   Twinkle, twinkle, little star!
+Though I know not what you are!
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;By Jane Taylor, 1783-1824
+Twinkle, twinkle, little star!
+
+By Jane Taylor, 1783-1824
+
+</blockquote>

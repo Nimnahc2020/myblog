@@ -5,7 +5,7 @@ dropCap: false
 displayCopyright: false
 tags: ["Hugo"]
 gitinfo: false
-series: ["博客搭建"]
+series: ["博客小记"]
 ---
 添加的hugo-notice插件效果如下：
 

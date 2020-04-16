@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://crcrc.me/"
-title = "Nimnahc"
+title = "ruchan"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -93,7 +93,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "Nimnahc"
+    name = "ruchan"
     # 邮箱
     email = "ruchan1225@gmail.com"
     # 座右铭或简介
@@ -273,11 +273,11 @@ uglyURLs = false
     #     identifier = "about"
 
     ## 社交栏
-    #[[menu.socials]]
-    #    url = "https://github.com/Nimnahc2020"
-    #    name = "GitHub"
-    #    weight = 1
-    #    pre = "external"
+    [[menu.socials]]
+        url = "https://github.com/Nimnahc2020"
+        name = "GitHub"
+        weight = 1
+        pre = "external"
     #[[menu.socials]]
     #    url = "https://t.me/yixiuer"
     #    name = "Telegram"
@@ -295,11 +295,11 @@ uglyURLs = false
         name = "Home"
         weight = 1
         pre = "internal"
-    [[menu.links]]
-        url = "/tags/"
-        name = "Tags"
-        weight = 2
-        pre = "internal"		
+    #[[menu.links]]
+    #    url = "/tags/"
+    #    name = "Tags"
+    #    weight = 2
+    #    pre = "internal"		
     [[menu.links]]
         url = "/Photos/"
         name = "Photos"
@@ -417,7 +417,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "Nimnahc's blog"
+    siteDescription = "ruchan's blog"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -534,7 +534,7 @@ uglyURLs = false
     # 说明：分区的名字即站点的 content 目录下
     #      的文件夹的名字。
 
-    mainSections = ["life","tech"]
+    mainSections = ["life","taste"]
 
 
     ######################################
@@ -670,7 +670,7 @@ uglyURLs = false
 
     ## Disqus
     enableDisqus = false
-    disqusShortname = "Nimnahc"
+    disqusShortname = "ruchan"
 
     ## Valine
     enableValine = false
@@ -1406,7 +1406,7 @@ uglyURLs = false
         identifier = "lang-switcher"
 [languages.en.params]
     homePoetry = ["In the dark night", "Longing for a light of care", "In the daylight", "Desiring for the swallow of a black hole", "Cause curiosity","seeks for what it’s in the darkness","---quote from reuixiy"]
-    siteDescription = "Blog of Nimnahc in English."
+    siteDescription = "Blog of ruchan in English."
     listDateFormat = "January 2"
     fontFamilyTitle = "'Amstelvar', serif"
     fontFamilyHeadings = "'Amstelvar', serif"
