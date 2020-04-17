@@ -37,7 +37,7 @@ series: ["博客小记"]
 亲身实践：进入 [hugo-notice](https://github.com/martignoni/hugo-notice)，按照提示在根目录下执行 `git submodule add https://github.com/martignoni/hugo-notice.git themes/hugo-notice`。然后 themes 文件夹中便出现了 hugo-notice 主题，接着再根据提示把站点配置文件`config.yaml`（或则是`config.toml`)中有关 theme 一项加上该主题`hugo-notice`。
 
 Example, with `config.toml`:
-```
+```toml
 theme = ["hugo-notice", "your-theme"]
 ```
 执行上述步骤后的确能使用该插件，但是效果不尽人意（和它在页面上贴出来的效果相差甚远）😂。
@@ -51,12 +51,12 @@ Hugo 有个特点:..灵活..，你可以直接在根目录下命名有关文件�
 先在站点目录中的 layouts 下新建 shortcodes文件夹,再放入`align.html`以及`notice.html`两个文件。
 
 `align.html`内容：
-```
+```html
 <!--repalce custom content to hugo shortcode-->
 <p style="text-align:{{ index .Params 0 }}">{{ index .Params 1 | markdownify }}</p>
 ```
 `notice.html`内容：
-```
+```html
 <!--https://github.com/martignoni/hugo-notice-->
 <!--change notice color-->
 {{- $noticeType := .Get 0 -}}
@@ -171,7 +171,7 @@ Hugo 有个特点:..灵活..，你可以直接在根目录下命名有关文件�
 ```
 再进入根目录下的 i18n 文件夹（没有即可新建），放入`zh.toml`，若开启了多语言站点，如英语，可继续放入`en.toml`。
 两文件内容均为：
-```
+```toml
 [notice-warning]
 other = "Warning"
 
@@ -185,7 +185,7 @@ other = "Info"
 other = "Tip"
 ```
 最后前往 data 文件夹，加入`SVG.toml`（已有即可直接加入下述代码）。`SVG.toml`内容：
-```
+```toml
 # Notice Icon
 notice-warning = '<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 576 512"><path d="M570 440c18 32-5 72-42 72H48c-37 0-60-40-42-72L246 24c19-32 65-32 84 0l240 416zm-282-86a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/></svg>'
 notice-info = '<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z"/></svg>'
@@ -198,6 +198,6 @@ notice-tip = '<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 
 
 使用时加上下述相应代码(文本内容自行修改)即可：
 
-![代码截图](/images/科学技术/建站笔记/hexo-notice.png "截图")
+![代码截图](/images/兴趣探索/建站笔记/hexo-notice.png "截图")
 
 发现我只要输入上图相应代码，无论是否放在代码块中，都会被转化😹。于是便只放了张图。

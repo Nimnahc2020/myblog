@@ -1,7 +1,8 @@
 ---
-title: "Github（多账号）之 SSH "
+
+title: "SSH 之 Github（单/多账号）"
 date: 2020-04-02T11:59:34+08:00
-tags: ["Hugo"]
+tags: ["git"]
 series: ["博客小记"]
 aliases: ["/study/blog/探索ssh/"]
 gitinfo: true
@@ -10,164 +11,142 @@ dropCap: false
 
 ## 前言
 
-使用 Github Page 部署个人博客后便知道，当我们用「用户名.github.io」作为仓库名时，再将 public 文件推至该 Github 仓库，便可得到一个形为「用户名.github.io」的网址。显然，这种仓库名在一个 Github 账号中只能存在一个，故而一个账号只能得到一个这样的网址。
+使用 Github Page 部署个人博客后便知道，当我们用「用户名.github.io」作为仓库名时，再将 public 文件推至该 Github 仓库，便可得到一个形为「用户名.github.io」的网址。显然，这种仓库名在一个 Github 账号中只能存在一个，故而一个账号只能得到一个这样的网址。😑
 
 <blockquote class="quote">按理一个仓库可部署出一个静态网站，但 「用户名.github.io」已经算是其中最简便最好记的网址。不在意域名长的话，一个 Github 账户自然可得到多个个人博客。</blockquote>
 
-由于我之前花了大量精力鼓弄了一个 Hexo 框架，主题为 Next 的博客，因加入了许多花里胡哨但却并没必要的功能，网站打开速度慢，这也是我转而使用 Hugo 框架的原因 。我既不想放弃魔改已久的博客，又不想网址太丑（绑定个人域名可以避免这点），于是干脆新申请了个 Github 账号用以配合 Hugo 搭建个人博客。
+由于我之前花了大量精力鼓弄了一个 Hexo 框架，主题为 Next 的博客，因加入了许多花里胡哨但却并没必要的功能，网站打开速度慢，这也是我转而使用 Hugo 框架的原因 。我既不想放弃魔改已久的博客，又不想网址太丑（绑定个人域名可以避免这点），于是干脆新申请了个 Github 账号用以配合 Hugo 搭建个人博客。🙃
 
-但这时便面临问题，一方面仍执着于鼓弄 Next 主题新功能，另一方面还得向 Hugo 所在的 Github 仓库上传更新文件，导致电脑登陆 Github 账户时不知道。
+但这时便面临问题，一方面仍执着于鼓弄 Next 主题新功能，另一方面还得向 Hugo 所在的 Github 仓库上传更新文件，而且两个博客都是通过默认的 HTTPS 的方式上传文件，HTTPS 输入账号密码后会默认保存，这就导致电脑登陆 Github 时可能会错位，即可能使用了账号一的密码去登陆账号二。
 
-### 新建Github账户
+针对这种情况有一种解决方法：在想切换登陆账号二时，删去已保存的 Github 账号一的用户名和密码，接着再输入账号二的用户名和密码。
 
-同hexo一样，新建仓库（仓库名和Github账户名一致），然后...emm..难受！
+删去方法如下：
 
-### 运行命令
+在以下路径找到 Github 的 Windows 凭据，直接删除即可。
 
-前提是你已经安装好了Hugo，选好并下载好了主题。（我选择的是MemE）
+![Windows凭据](/images/兴趣探索/建站笔记/Windows.png "控制面板→用户账户→凭据管理器")
 
-```
-官方说明：
- hugo --theme=主题 --baseUrl="http://your_name.github.io/"
- 作用:通过命令渲染出你所需要的页面等文件，并将其存放在了public文件夹中
-（我的：hugo --theme=meme --baseUrl="http://Nimnahc2020.github.io/"）
- Ps:hiahia,谁知道我的这名字怎么读，源于啥呀？
-```
+显然这样的操作极为麻烦，倘若能通过 SSH 分别匹配好一个账号，那就能免去每次输入账号密码的麻烦过程了[^1]😎。
 
-紧接着：
+先来看看如何使用 SSH：
 
-```
-$ cd public         
-//进入public仓库（因为你之前是在hugo根目录下运行的①的命令）
-$ git init             
-//初始化git
-$ git remote add origin https://github.com/your_name/your_name.github.io.git   
-//我也还没看出这是干哈的，直译好像就那个意思
-$ git add -A      
-// 像是把该文件夹所有修改上传上去
-$ git commit -m "first commit"       
-//就是上传更新的文件所拥有的注释，双引号内即为注释，可修改(自己看得懂啥意思就行)
-$ git push -u origin master             
-//emm，只有这一步成功才算万事大捷
+## 单账号
+
+首先执行下行命令生成 SSH 密钥对：
+
+```javascript
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-### 发现问题
+将上面的邮箱地址改为你自己在 GitHub 上的[邮箱地址](https://github.com/settings/emails)。如果你是第一次生成的话，一路回车即可（口令 passphrase 非必须）。若遇到需回答「 yes or no ?」，键入 `yes `并回车即可。
 
-Bingo!在上面的最后一步遇到问题。（非拥有两个github的忽略这个）
+这样就会在C盘用户目录下生成**.ssh 文件夹**，其中包含了 id_rsa 和 id_rsa.pub 这两个文件，前者是私钥，后者是公钥，用记事本打开 id_rsa.pub，复制其中的全部内容，再去 GitHub 上[设置](https://github.com/settings/keys)一个 New SSH key，标题随意起，最后粘贴公钥即可。这样本地的 id_rsa 密钥就可以和GitHub上的 id_rsa.pub 公钥进行配对，授权成功。
 
-Emm，先谈我对ssh的浅且简的理解，我们运行上诉命令，都是通过计算机的各种运行环境，至今我只用过两种
-运行界面：git bash 和cmd命令，当你安装了一些软件，并且成功加入到了计算机的运行环境中后，你就可以调用相关的命令。
-（Eg：安装了git 那么就可调用和git相关的命令，hexo、hugo都一样的意思）
-而调用有些命令上联网操作的，你能把本地文件上传到Github上当然要联网。
-Github又是一个账户，自然需要账号密码。
-这个时候就有网站的HTTPS设置和SSH设置了，新建仓库后都看得到这两个设置。
-用HTTPS布置网站后，你要输入账号密码，SSH就是能帮你保存账号密码，让你第一次输入账号密码登入后一段时间都不再需要账号密码上传文件。
-（我到现在都没搞清楚hexo的repo设置中HTTPS和SSH设置有啥不同，都在输入密码后就不用输了）
-总之明白原理就好办事了。
+注：如果你之前通过`git remote add` 添加了 Github 仓库的 HTTPS 地址[^2]，那么需要修改仓库的远程仓库链接地址为 SSH 地址，在..本地仓库文件..中打开 git bash，键入如下命令：
 
-## 解决问题
-
-### SSH操作
-
-上述问题据我了解：好比是你默认用了自己只有自家北极豪宅家门的钥匙，并用它去开你在南极豪宅的家门，完全打不开啊。那么这个时候就需要你更改默认设置了。
-
-#### SSH体验
-
-**SSH相关设置：主要参考[这篇文章](https://github.com/jawil/notes/issues/2)**
-
-照着文章的方法做就行。
-
-注意： ①清除 git 的全局设置，上文提到了两种方法，自行查阅
-             ②在.ssh文件下创建config,我也不造这是个啥东西，反正改它就是了。
-
+```javascript
+git remote set-url origin git@github.com:Nimnahc2020/myblog.git
 ```
-这里特别说明config的文本内容：
-#该文件用于配置私钥对应的服务器
-#Default github user(609514766@qq.com)
+
+将`git@github.com:Nimnahc2020/myblog.git`换为你仓库的 SSH 地址即可。
+
+![SSH](/images/兴趣探索/建站笔记/SSH.png "SSH 地址")
+
+此外，当你本地第一次连接 GitHub 的服务器时，可能会有警告信息，键入 `yes` 并回车即可。
+
+## 多账号
+
+同单账号一样，先得到两组密钥对，邮箱分别对应两个账号：
+
+```javascript
+# 帐号一
+ssh-keygen -t rsa -b 4096 -C "your_email@example_one.com"
+
+# 帐号二
+ssh-keygen -t rsa -b 4096 -C "your_email@example_two.com"
+```
+
+这里注意：当看到提示：
+
+```javascript
+Enter file in which to save the key (/home/archie/.ssh/id_rsa): 
+```
+
+修改一下默认的 `id_rsa`，建议在后面加上你的 GitHub 用户名，比如修改为 `id_rsa_nimnahc`。或者直接进入**.ssh 文件夹**修改相应文件名称，如`id_rsa_nimnahc`和 `id_rsa_nimnahc.pub`。
+
+通过上述操作，我得到`id_rsa_nimnahc`和`id_rsa_willcai`两份密钥。
+
+然后，执行下面三行命令，将生成的两个密钥添加到 ssh-agent：
+
+```javascript
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa_nimnahc
+$ ssh-add ~/.ssh/id_rsa_willcai
+```
+
+接下来，在`.ssh`文件夹内添加一个 `config` 文件来配置 SSH：
+
+```javascript
+$ touch config
+```
+
+输入以下内容（自行修改 `host` 和 `IdentityFile`）
+
+```javascript
 Host WillCAI2020.github.com
         HostName github.com
-        IdentityFile ~/.ssh/id_rsa_one
+		User git
+        IdentityFile ~/.ssh/id_rsa_willcai
 
 Host Nimnahc2020.github.com
         HostName github.com
-        IdentityFile ~/.ssh/id_rsa_two
-注意缩进，id_rsa_one(two)根据具体名字填
-Host 后的东西可更改。
+		User git
+        IdentityFile ~/.ssh/id_rsa_nimnahc
 ```
 
-还要注意把相应的SSH密钥添加到你的不同的Github账户上，这里不赘述。
+类似的，修改下相应仓库的远程仓库链接地址：
 
+```javascript
+# 帐号一
+$ git remote set-url origin git@Willcai2020.github.com:Willcai2020/blog-hexo.git
+
+# 帐号二
+$ git remote set-url origin git@Nimnahc2020.github.com:Nimnahc2020/myblog.git
 ```
-配置完后运行：
+
+..特别注意..：主机名分别是 `Willcai2020.github.com` 和 `Nimnahc2020.github.com`，而不再是默认的 `github.com` 了，以后克隆仓库时也要..注意..：修改为帐号的相应主机名。
+
+最后，将相应的公钥添加到你相应的 GitHub 帐号即可。
+
+可通过如下命令验证是否成功：
+
+```javascript
 $ ssh -T git@WillCAI2020.github.com
 $ ssh -T git@Nimnahc2020.github.com
-发现都匹配成功。（但我总觉得SSH好像有没有都差不多）
 ```
 
-#### 处理SSH
+若出现如下提示：
 
-接着就是处理钥匙的问题了，多次尝试后，终于发现行得通的方法，如下：
-
-① 就是把你之前删掉的默认用户名、密码加回去。（即前面提到的清除git全局设置不需要做..做了只是提高
-你更深的认识）
-
-```
-添加命令：
-git config --global user.name userA
-git config --global user.email userA@Email.com
-或着直接找到.gitconfig文件修改即可。
+```javascript
+Hi WillCAI2020! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-② 到相应仓库文件设置该仓库路径的钥匙，这样听说是能在这份文件路径中使用你新设置的钥匙。
-
-表述的有点含糊，引用一篇文章内的话：
-
-```
-单独设置每个repo 用户名/邮箱”这个步骤，我就是跑到工程下，执行git config user.email “xxxx@xx.com”和git config user.name “xxxx”命令。看来以后每次我GitHub／GitLab clone一个新的工程下来，都要在clone完成后，在这个工程目录下执行这两条语句来配置。【解决办法】：工作电脑平时使用公司的gitlab比较多，可以把公司的账户设置为全局，然后在单独的需要用别的账号的工程下配置对应的账号。这样就不用频繁地做这个配置。(这个全局设置与单独工程下设置地顺序不做要求)
-```
-
-大概就这个意思。
-
-③ **关键步骤，销毁证书（记忆消失大法）**
-
-主要参考[这篇文章](https://blog.csdn.net/klxh2009/article/details/76019742)
-
-你之前的操作让电脑记住了你的默认钥匙，那怎么办，办法简单，把它灭口。
-你需要找到“管理Windows凭据”该选项，我的是在：我的电脑—单击属性—控制面板—用户账户—管理Windows—凭据-Windows凭据。
-然后找到普通凭据中那把你想消除的记忆，删掉即可。
-
-④ 收尾工作
-
-最后你再去部署，计算机又要你输账号密码，你把该博客仓库对应的Github账号密码输入，以我在hugo文件下为例，我输入了hugo对应的Github数据，这时电脑又会得到这把钥匙，并把它作为默。之后我如果想去更新hexo博客，那就得去丢掉这把钥匙，再输入hexo对应Github的数据，完成推送更新。
-
-```
-Hugo推送更新:
-首先在hugo根目录下运行： hugo --theme=主题 --baseUrl="http://your_name.github.io/"  
-//以此生成最新的public文件。
-然后运行：（$ 不是命令，人家就一符号）
-$ cd public          //进入该文件
-$ git status         //运行后可看到有做修改的文件
-$ git add -A       //上传所有修改
-$ git commit -a -m "update"         //注释
-$ git push origin master -f         //上传文件
-```
-
-然后就okk了。
+即表示与远程仓库公钥匹配成功。🎉🍾🥂
 
 ## 后语
 
-同样，以上提供的操作方法很可能有很多根本不需要，但是我终究是做了这些步骤后解决了问题。
-这是我继上述操作成功后就赶忙记录的文章，也算是我在Hugo上的第一篇文章，很大程度也是草稿，语言多显随意。
+本打算通过这个方式实现免密分别部署的，但发现 hexo 并未达到预想效果，在`hexo d`后报错`git@github.com: Permission denied (publickey)`,但倘若通过 Git 命令提交 public 文件，却可以实现提交。🤔
 
-初次接触Hugo,以及MemE主题，很多功能还不会用，比如上传图片等...(所以该文还未拥有相应图片讲解)
+因而部署`hexo`我仍然使用 HTTPS 地址，而提交 Hugo 原码时我便通过 SSH 地址实现免登陆提交，这算是一种折中的方案吧。🙃
 
-MemE主题还有很多好玩的且简捷的配置，我虽然很有兴趣去探索，但是以我一探索起来啥也顾不着的性格，还是先补补觉，赶一赶催交的作业吧。
+## 参考文章
 
-很感谢设计并提供这一主题的[reuixiy大佬](https://io-oi.me/)
-我昨晚依据meme教程安装后，`hexo server -D`重视出错，大意好像说是什么scss文件找不到，于是我在MemE的Issues某个讨论上弱弱地问出了我在Github上的第一问题，因为感觉想这些大佬都不怎么会注意到这种发言，于是我就去别的页面搞解决方法，结果当我四十分钟筋疲力尽地回到Issues上后，发现reuixiy大佬竟然回了我的问题，
+1. [GitHub Help | 关于SSH](https://help.github.com/en/articles/connecting-to-github-with-ssh)
+2. [GitHub Issues | 同一台电脑配置多个 git 账号](https://github.com/jawil/notes/issues/2)
+3. [CSDN | 解决 remote: Permission to userA/repo.git denied to userB](https://blog.csdn.net/klxh2009/article/details/76019742)
+4. [reuixiy | 使用 SSH 连接到 GitHub（多帐号）](https://io-oi.me/tech/ssh-with-multiple-github-accounts/)
 
-并标注出了对上一位提出该问题地回答。（原来MemE是需要hugo-extened版本安装才完美）
-于是我就去下载hugo-extened，我安装了choco并用choco命令下载hugo-extened,但是由于该命令是从外网下载文件，而我并无科学上网的渠道（都好贵），于是就慢慢地等啊等啊等啊（有好多次都是下到一半就gg了）
-终于历经千辛万苦，我在今日凌晨的深夜中得到了运行提示：`Web Server is available at http://localhost:1313/` （喜极而泣）
+[^1]:SSH 与 HTTPS 的区别及介绍可浏览[这篇文章](https://www.cnblogs.com/dzblog/p/6930147.html)。
 
-然后就把部署到github上生成网站的任务交给白天的我了。
+[^2]: 可通过浏览本地仓库 `.git`文件下的 `config` 文件来确认地址。
