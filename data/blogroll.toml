@@ -11,3 +11,10 @@
   avatar = "/images/友链/reuixiy.png"
   description = "VIAVA IA VIDA"
   weight = 2
+  
+[[blogroll]]
+  name = "小丁"
+  url = "https://tding.top/"
+  avatar = "/images/友链/tding.png"
+  description = "世间所有的相遇，都是久别重逢"
+  weight = 3

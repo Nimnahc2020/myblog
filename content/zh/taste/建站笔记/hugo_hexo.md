@@ -2,7 +2,7 @@
 
 title: "SSH 之 Github（单/多账号）"
 date: 2020-04-02T11:59:34+08:00
-tags: ["git"]
+tags: ["Git"]
 series: ["博客小记"]
 aliases: ["/study/blog/探索ssh/"]
 gitinfo: true
@@ -41,7 +41,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 将上面的邮箱地址改为你自己在 GitHub 上的[邮箱地址](https://github.com/settings/emails)。如果你是第一次生成的话，一路回车即可（口令 passphrase 非必须）。若遇到需回答「 yes or no ?」，键入 `yes `并回车即可。
 
-这样就会在C盘用户目录下生成**.ssh 文件夹**，其中包含了 id_rsa 和 id_rsa.pub 这两个文件，前者是私钥，后者是公钥，用记事本打开 id_rsa.pub，复制其中的全部内容，再去 GitHub 上[设置](https://github.com/settings/keys)一个 New SSH key，标题随意起，最后粘贴公钥即可。这样本地的 id_rsa 密钥就可以和GitHub上的 id_rsa.pub 公钥进行配对，授权成功。
+这样就会在C盘用户目录下生成`.ssh`文件夹，其中包含了 id_rsa 和 id_rsa.pub 这两个文件，前者是私钥，后者是公钥，用记事本打开 id_rsa.pub，复制其中的全部内容，再去 GitHub 上[设置](https://github.com/settings/keys)一个 New SSH key，标题随意起，最后粘贴公钥即可。这样本地的 id_rsa 密钥就可以和 GitHub上的 id_rsa.pub 公钥进行配对，授权成功。
 
 注：如果你之前通过`git remote add` 添加了 Github 仓库的 HTTPS 地址[^2]，那么需要修改仓库的远程仓库链接地址为 SSH 地址，在..本地仓库文件..中打开 git bash，键入如下命令：
 
@@ -67,13 +67,13 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example_one.com"
 ssh-keygen -t rsa -b 4096 -C "your_email@example_two.com"
 ```
 
-这里注意：当看到提示：
+这里..注意..，当看到提示：
 
 ```javascript
 Enter file in which to save the key (/home/archie/.ssh/id_rsa): 
 ```
 
-修改一下默认的 `id_rsa`，建议在后面加上你的 GitHub 用户名，比如修改为 `id_rsa_nimnahc`。或者直接进入**.ssh 文件夹**修改相应文件名称，如`id_rsa_nimnahc`和 `id_rsa_nimnahc.pub`。
+修改一下默认的 `id_rsa`，建议在后面加上你的 GitHub 用户名，比如修改为 `id_rsa_nimnahc`。或者直接进入`.ssh` 文件夹修改相应文件名称，如`id_rsa_nimnahc`和 `id_rsa_nimnahc.pub`。
 
 通过上述操作，我得到`id_rsa_nimnahc`和`id_rsa_willcai`两份密钥。
 
