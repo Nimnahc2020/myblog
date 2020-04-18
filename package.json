@@ -1,8 +1,8 @@
 {
   "name": "myblog",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "Blog of ruchan",
+  "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-uglify": "^3.0.2",
@@ -13,15 +13,20 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+	"update-theme": "git submodule update --rebase --remote",
 	"build": "git config --global core.quotePath false && hugo --gc --minify --cleanDestinationDir && ./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nimnahc2020/myblog.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+	"blog",
+	"hugo",
+	"hugo-theme-meme"
+  ],
+  "author": "ruchan",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
     "url": "https://github.com/Nimnahc2020/myblog/issues"
   },
