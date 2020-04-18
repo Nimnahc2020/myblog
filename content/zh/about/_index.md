@@ -25,9 +25,9 @@ displayCopyright: false
 
 记录在当下生活是一件常见的事（我讨厌日记般的记录），记录的渠道在当下也有很多形式，手机上的备忘录、存于各种邮箱、发表朋友圈、动态等等。我很少起记录之心，一是感觉没必要，二是感觉还是没那必要。
 博客也不过是种记录的形式，有人说它更纯粹，同时也很灵活，它能通过各种有趣的插件完善其功能，它记录的主要形式是文字，但也不限于文字。如今构建个人博客的门槛越来越低，只需要一点点兴趣，加上些许时间，一个独属于个人的小站便出现了。
-正因兴趣使然，我鼓弄出了该博客（还有一个 [hexo·next 主题的博客](https://willcai2020.github.io/)），感觉其内空空也是可惜，于是感性或闲时便写点能看的东西在其中填充一二，其中些许文章是经亲身实践并修改后搬运于此。倘若有人放慢脚步，浏览一番，并能于这小站中收获一二，那自是令我大为欢喜！若能于转载时注明出处，那是更好不过的了。
+正因兴趣使然，我鼓弄出了该博客（另有 [Hexo-Next 博客](https://willcai2020.github.io/)），感觉其内空空也是可惜，于是感性或闲时便写点能看的东西在其中填充一二，其中些许文章是经亲身实践并修改后搬运于此。倘若有人放慢脚步，浏览一番，并能于这小站中收获一二，那自是令我大为欢喜！若能于转载时注明出处，那是更好不过的了。
 
-目前该博客采用的是 [Hugo](https://gohugo.io/) 框架，主题选用了 [MemE](https://github.com/reuixiy/hugo-theme-meme)，源码放在我的 [Github仓库](https://github.com/Nimnahc2020/myblog)，博客通过 [Netlify](https://www.netlify.com/) 持续构建，且仍未放弃在 [Github的部署](https://nimnahc2020.github.io/)。
+目前该博客采用的是 [Hugo](https://gohugo.io/) 框架，主题选用了 [MemE](https://github.com/reuixiy/hugo-theme-meme)，源码放在我的 [Github仓库](https://github.com/Nimnahc2020/myblog)，博客通过 [Netlify](https://www.netlify.com/) 持续构建，部署在星际文件系统 [IPFS](https://ipfs.io/) 上。
 本博客是一个 [PWA](https://developers.google.com/web/progressive-web-apps/) 站点，即你可以通过浏览器添加本站到你的计算机桌面或手机主界面，并允许随时随地观看，不论有网与否。
 
 倘若你在浏览博客时发现任何问题，欢迎前往我的 Github 仓库提交 [Issues](https://github.com/Nimnahc2020/myblog/issues)，或者直接修改相关文件后提交 Pull Requests。联系我可通过邮箱：<a href="mailto:ruchan1225@gmail.com" title="E-Mail → mailto:ruchan1225@gmail.com" rel="noopener" target="_blank">ruchan1225@gmail.com</a>。
