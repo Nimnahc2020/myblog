@@ -974,7 +974,7 @@ uglyURLs = false
     # 说明文字
     fontFamilyCaption = ""
     # 页脚
-    fontFamilyFooter = "'Source Code Pro', 'Noto Serif SC', monospace"
+    fontFamilyFooter = "'Ma Shan Zheng', 'Noto Serif SC', monospace"
     # 主体
     fontFamilyBody = "'Amstelvar', 'Noto Serif SC', serif"
 
