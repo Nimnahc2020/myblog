@@ -299,7 +299,12 @@ uglyURLs = false
     #    url = "/tags/"
     #    name = "Tags"
     #    weight = 2
-    #    pre = "internal"		
+    #    pre = "internal"
+    [[menu.links]]
+        url = "https://ruchan-book.netlify.app"
+        name = "note"
+        weight = 2
+        pre = "external"	
     [[menu.links]]
         url = "/Photos/"
         name = "Photos"
