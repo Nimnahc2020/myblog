@@ -278,6 +278,16 @@ uglyURLs = false
         name = "GitHub"
         weight = 1
         pre = "external"
+    [[menu.socials]]
+        url = "/books/"
+        name = "books"
+        weight = 2
+        pre = "internal"
+	[[menu.socials]]
+        url = "/movies/"
+        name = "movies"
+        weight = 3
+        pre = "internal"	
     #[[menu.socials]]
     #    url = "https://t.me/yixiuer"
     #    name = "Telegram"
@@ -294,7 +304,7 @@ uglyURLs = false
         url = "/"
         name = "Home"
         weight = 1
-        pre = "internal"
+        pre = "internal"		
     #[[menu.links]]
     #    url = "/tags/"
     #    name = "Tags"
