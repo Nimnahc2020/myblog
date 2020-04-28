@@ -189,17 +189,17 @@ uglyURLs = false
     #     pre = "internal"
     #     post = "archive"  fa-toggle-down
     [[menu.main]]
-        url = "/categories/"
-        name = "分类"
-        weight = 2
-        pre = "internal"
-        post = "th"
-    [[menu.main]]
         url = "/tags/"
         name = "标签"
         weight = 1
         pre = "internal"
         post = "tags"
+	[[menu.main]]
+        url = "/categories/"
+        name = "分类"
+        weight = 2
+        pre = "internal"
+        post = "th"
 	[[menu.main]]
         url = "/series/"
         name = "专栏"
@@ -207,23 +207,36 @@ uglyURLs = false
         pre = "internal"
         post = "leaf"
 	[[menu.main]]
+        url = "/archives/"
+        name = "归档"
+        weight = 4
+        pre = "internal"
+        post = "archive"		
+	[[menu.main]]
         url = "/blogroll/"
         name = "友链"
         weight = 5
         pre = "internal"
         post = "link"
+    [[menu.main]]
+        url = "/about/"
+        name = "关于"
+        weight = 6
+        pre = "internal"
+        post = "user-circle"
+        identifier = "about"	
+    [[menu.main]]
+        weight = 7
+        identifier = "theme-switcher"
+    [[menu.main]]
+        weight = 8
+        identifier = "lang-switcher"		
     # [[menu.main]]
     #     url = "/about/"
     #     name = "关于"
     #     weight = 5
     #     pre = "internal"
     #     post = "user-circle"
-    [[menu.main]]
-        weight = 7
-        identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 8
-        identifier = "lang-switcher"
     #[[menu.main]]
     #    url = "/record/"
     #    name = "记录"
@@ -238,19 +251,7 @@ uglyURLs = false
     #    pre = "internal"
     #    post = "grav"
     #    identifier = "life"
-    [[menu.main]]
-        url = "/about/"
-        name = "关于"
-        weight = 6
-        pre = "internal"
-        post = "user-circle"
-        identifier = "about"
-	[[menu.main]]
-        url = "/archives/"
-        name = "归档"
-        weight = 4
-        pre = "internal"
-        post = "archive"
+
 
     ## 首页的底部链接
     # [[menu.home]]
@@ -279,15 +280,15 @@ uglyURLs = false
         weight = 1
         pre = "external"
     [[menu.socials]]
-        url = "/books/"
+        url = "https://crcrc.netlify.app/books/"
         name = "books"
         weight = 2
-        pre = "internal"
+        pre = "external"
 	[[menu.socials]]
-        url = "/movies/"
+        url = "https://crcrc.netlify.app/movies/"
         name = "movies"
         weight = 3
-        pre = "internal"	
+        pre = "external"
     #[[menu.socials]]
     #    url = "https://t.me/yixiuer"
     #    name = "Telegram"
