@@ -980,7 +980,7 @@ uglyURLs = false
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
     fontFamilyTitle = "'Cinzel Decorative', 'Ma Shan Zheng', 'Amstelvar', 'Noto Serif SC', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'Ma Shan Zheng', 'Amstelvar', 'Noto Serif SC', serif"
+    fontFamilyHeadings = "'Noto Serif SC', 'Ma Shan Zheng', 'Noto Serif SC', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
     fontFamilyCode = "'Source Code Pro', 'Noto Serif SC', monospace"
     # 引用
@@ -995,7 +995,7 @@ uglyURLs = false
     fontFamilyBody = "'Amstelvar', 'Noto Serif SC', serif"
 
     # 网络字体链接
-	fontsLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Ma+Shan+Zheng&family=Cinzel+Decorative&display=swap"
+	fontsLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Ma+Shan+Zheng&family=Cinzel+Decorative&display=swap"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往

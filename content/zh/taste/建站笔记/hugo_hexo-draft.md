@@ -173,3 +173,14 @@ MemE主题还有很多好玩的且简捷的配置，我虽然很有兴趣去探�
 终于历经千辛万苦，我在今日凌晨的深夜中得到了运行提示：`Web Server is available at http://localhost:1313/` （喜极而泣）
 
 然后就把部署到github上生成网站的任务交给白天的我了。
+
+接着进入根目录，可以看到有一个 `.gitignore` 文件，上面介绍过被记录在`.gitignore`中的文件会被忽略上传。而由于这种方法是直接提交根目录文件到 Github 仓库的，而其中有些文件太大且并没有必要提交，比如 `node_modules` 和 `public` 这两个文件夹。为什么不需要这两个文件夹呢？下面引「荷戟独彷徨」大佬的讲解[^2]：
+
+<div class="mytag">
+<p style="margin:21px">
+   <b>对于 public 文件夹，由于 Netlify 会在线执行 hexo g 的命令，实现在线部署，所以不再需要它。对于 node_modules 文件夹，在你的博客源码存放的文件夹根目录下，还有一个 package.json 文件，每当你安装插件的时候，会执行一个命令：npm install xxx --save，这样就将该插件的信息存放在了 package.json 文件中。上传的时候就不需要将全部插件一同上传，节省了仓库的空间。而 Netlify 的持续集成服务会自动检查 package.json 的改动并在它的容器上安装或移除相应模块。<br /><br />当然这里还需要说明一点，如果你在存放于 node_modules 的任何插件中修改了代码，由于 Netlify 读取的是 package.json 的信息，只会安装原插件的内容，并不知道你的修改内容，所以你需要将修改后的插件自行上传，然后再修改 package.json 中该插件的路径到你的仓库。</b>
+</p>
+<div style="text-align:right;margin:15px" ><footer>——<cite>荷戟独彷徨</cite></footer></div>	
+</div>
+
+浏览`.gitignore`文件，发现其中
