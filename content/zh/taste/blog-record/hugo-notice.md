@@ -3,9 +3,9 @@ title: "添加插件hugo-notice"
 date: 2020-04-08T10:44:02+08:00
 dropCap: false
 displayCopyright: false
-tags: ["Hugo"]
+tags: ["Hugo","Blog"]
 gitinfo: false
-series: ["博客小记"]
+series: ["notes-on-blog"]
 ---
 添加的hugo-notice插件效果如下：
 

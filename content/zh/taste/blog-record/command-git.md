@@ -1,19 +1,20 @@
 ---
-title: "命令笔记"
+title: "命令笔记 - Git"
 date: 2020-04-12T11:19:31+08:00
 dropCap: false
 displayCopyright: false
 tags: ["Command", "Git"]
+aliases: ["/study/blog/command-git/"]
 toc: false
 gitinfo: true
-series: ["博客小记"]
+series: ["notes-on-blog"]
 ---
 
 时光流淌，记忆总要模糊淡去。
 我写博客的一个初衷本来便是..记录..：记录学习，记录生活。
 博客能让我这三分热度且健忘的人保留一份存档。它能让我在写的过程中审视自身的收获，在写完后的某一天重拾这份收获。同时，它也能让我的收获帮助需要它的人。
 
-本文记录些许对我来说较为常用的 git 命令、npm 命令、markdown 语法等。
+本文记录些许对我来说较为常用的 Git 命令。
 
 ## Git命令
 

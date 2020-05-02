@@ -2,9 +2,9 @@
 
 title: "SSH 之 Github（单/多账号）"
 date: 2020-04-02T11:59:34+08:00
-tags: ["Git"]
-series: ["博客小记"]
-aliases: ["/study/blog/探索ssh/"]
+tags: ["Git","Blog"]
+series: ["notes-on-blog"]
+aliases: ["/study/blog/ssh/"]
 gitinfo: true
 dropCap: false
 ---

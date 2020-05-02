@@ -6,7 +6,7 @@ displayCopyright: false
 tags: ["C"]
 toc: false
 gitinfo: true
-series: ["探索学习"]
+series: ["study-more"]
 ---
 
 学习笔记：C语言调用..随机数..
