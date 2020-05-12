@@ -36,17 +36,23 @@ dropCap: false
 首先执行下行命令生成 SSH 密钥对：
 
 ```javascript
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 将上面的邮箱地址改为你自己在 GitHub 上的[邮箱地址](https://github.com/settings/emails)。如果你是第一次生成的话，一路回车即可（口令 passphrase 非必须）。若遇到需回答「 yes or no ?」，键入 `yes `并回车即可。
 
 这样就会在C盘用户目录下生成`.ssh`文件夹，其中包含了 id_rsa 和 id_rsa.pub 这两个文件，前者是私钥，后者是公钥，用记事本打开 id_rsa.pub，复制其中的全部内容，再去 GitHub 上[设置](https://github.com/settings/keys)一个 New SSH key，标题随意起，最后粘贴公钥即可。这样本地的 id_rsa 密钥就可以和 GitHub上的 id_rsa.pub 公钥进行配对，授权成功。
 
+然后添加远程仓库关联：
+
+```C
+$ git remote add origingit@github.com:Nimnahc2020/myblog.git
+```
+
 注：如果你之前通过`git remote add` 添加了 Github 仓库的 HTTPS 地址[^2]，那么需要修改仓库的远程仓库链接地址为 SSH 地址，在..本地仓库文件..中打开 git bash，键入如下命令：
 
 ```javascript
-git remote set-url origin git@github.com:Nimnahc2020/myblog.git
+$ git remote set-url origin git@github.com:Nimnahc2020/myblog.git
 ```
 
 将`git@github.com:Nimnahc2020/myblog.git`换为你仓库的 SSH 地址即可。
@@ -105,13 +111,15 @@ Host Nimnahc2020.github.com
         IdentityFile ~/.ssh/id_rsa_nimnahc
 ```
 
-类似的，修改下相应仓库的远程仓库链接地址：
+类似的，..添加或修改..相应仓库的远程仓库链接地址：
 
 ```javascript
 # 帐号一
-$ git remote set-url origin git@Willcai2020.github.com:Willcai2020/blog-hexo.git
+$ git remote add origin git@WillCAI2020.github.com:WillCAI2020/blog-hexo.git
+$ git remote set-url origin git@WillCAI2020.github.com:WillCAI2020/blog-hexo.git
 
 # 帐号二
+$ git remote add origin git@Nimnahc2020.github.com:Nimnahc2020/myblog.git
 $ git remote set-url origin git@Nimnahc2020.github.com:Nimnahc2020/myblog.git
 ```
 

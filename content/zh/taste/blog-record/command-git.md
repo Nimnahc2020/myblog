@@ -8,6 +8,7 @@ aliases: ["/study/blog/command-git/"]
 toc: false
 gitinfo: true
 series: ["notes-on-blog"]
+slug: "command-git"
 ---
 
 时光流淌，记忆总要模糊淡去。

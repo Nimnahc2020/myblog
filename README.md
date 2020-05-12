@@ -9,7 +9,7 @@ This is a small site where I share my personal records, you can access from the 
 3. https://ipfs.io/ipns/crcrc.me/
 4. https://cloudflare-ipfs.com/ipns/crcrc.me/
 5. https://gateway.pinata.cloud/ipns/crcrc.me/
-6. or whichever [Public IPFS Gateway](https://ipfs.github.io/public-gateway-checker/)you like...
+6. or whichever [Public IPFS Gateway](https://ipfs.github.io/public-gateway-checker/) you like...
 
 Continuous deployment through [Netlify](https://www.netlify.com/):
 
