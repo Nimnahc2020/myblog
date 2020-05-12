@@ -188,12 +188,12 @@ uglyURLs = false
     #     weight = 2
     #     pre = "internal"
     #     post = "archive"  fa-toggle-down
-    [[menu.main]]
-        url = "/tags/"
-        name = "标签"
+	[[menu.main]]
+        url = "/archives/"
+        name = "归档"
         weight = 1
         pre = "internal"
-        post = "tags"
+        post = "archive"
 	[[menu.main]]
         url = "/categories/"
         name = "分类"
@@ -205,13 +205,13 @@ uglyURLs = false
         name = "专栏"
         weight = 3
         pre = "internal"
-        post = "leaf"
-	[[menu.main]]
-        url = "/archives/"
-        name = "归档"
+        post = "leaf"		
+    [[menu.main]]
+        url = "/share/"
+        name = "分享"
         weight = 4
         pre = "internal"
-        post = "archive"		
+        post = "tags"		
 	[[menu.main]]
         url = "/blogroll/"
         name = "友链"
@@ -301,18 +301,18 @@ uglyURLs = false
     #    pre = "external"
 
     ## 链接栏
-    [[menu.links]]
-        url = "/"
-        name = "Home"
-        weight = 1
-        pre = "internal"		
     #[[menu.links]]
-    #    url = "/tags/"
-    #    name = "Tags"
-    #    weight = 2
-    #    pre = "internal"
+    #    url = "/"
+    #    name = "Home"
+    #    weight = 1
+    #    pre = "internal"		
     [[menu.links]]
-        url = "https://ruchan-book.netlify.app"
+        url = "/tags/"
+        name = "Tags"
+        weight = 2
+        pre = "internal"
+    [[menu.links]]
+        url = "https://nimnahc2020.github.io/mybook/"
         name = "note"
         weight = 2
         pre = "external"	
