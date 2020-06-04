@@ -15,34 +15,16 @@ Good things worth sharing！
 
 |        名称         |                    描述                     |                     地址                     |
 | :-----------------: | :-----------------------------------------: | :------------------------------------------: |
-|      网盘神器       | [点我呀](https://crcrc.me/share/#网盘神器)😛 | [传送门](https://ruchan.lanzous.com/ibtkehg) |
+|      网盘神器       | [点我呀](https://crcrc.me/share/#网盘神器)😛 | [传送门](https://crcrc.me/life/tools/pan/) |
 |        护眼         |   [在这呢](https://crcrc.me/share/#护眼)😊   | [传送门](https://ruchan.lanzous.com/icj76mb) |
 | 书籍格式转换 + 阅读 |    [看这](https://crcrc.me/share/#书籍)👈    |    [传送门](https://crcrc.me/share/#书籍)    |
 |  浏览器推荐 + 插件  |  [来看看](https://crcrc.me/share/#浏览器)👀  |   [传送门](https://crcrc.me/share/#浏览器)   |
 |      解压工具       |  [推荐](https://crcrc.me/share/#解压工具)✌️  |  [传送门](https://crcrc.me/share/#解压工具)  |
-|    图片在线处理     |               压缩、修改尺寸                |  [传送门](https://crcrc.me/share/#图片处理)  |
+|      网页推荐       |               PDF；图片；音乐；LaTex...              |  [传送门](https://crcrc.me/share/#图片处理)  |
 
 ## 网盘神器
 
-许多人喜欢把文件储存在网盘上，而自前几年的网盘大战后，国内网盘也只有百度还在坚持。而百度网盘为了盈利，采取了很多方法，限速下载即是其一，但也因此招来许多怨念，仅开会员还不行，要开超级会员才能解除限速🙃。
-
-由于有时会急需下载大量文件而需要百度网盘，而有时却根本用不着百度网盘，这也导致充了超级会员也许也只用那么几次（土豪随意），当然百度网盘为这个也专门推出了提速一定时间的服务，但终归来说是要 money 的😶。
-
-对于穷人家的孩子，只能另寻它法，今年 4 月初爆出百度网盘破解版开发者被抓，不限速的 Pandownload 也因此扑街了。我之前也搜到过 Pandownload，但体验感不算好，除了最开始不限速下成功过几个文件，之后要么回归限速，要么根本下不了，提示获取下载链接失败等等错误。
-
-这里分享另一款神器，亲测有用，体验感还不错，点击[传送门](https://ruchan.lanzous.com/ibtkehg)下载。
-
-使用方法：
-
-下载完成后解压文件夹，然后进入解压好的文件夹，找到文件 `baidu666.vbe`，双击运行，然后会跳出 `cmd` 命令执行界面，稍等一小会即可，待界面自动关闭后，运行 `BaiduNetdisk.exe` 来打开百度网盘，然后即可不限速下载！
-
-![baidu](/images/分享/baidu666.png "步骤")
-
-![try](/images/分享/try.jpg "实践")
-
-倘若发现没达到预期效果，先检查网速，若网速没问题，重复上述步骤即可。
-
-此外提一句：若是在 100MB 以内的文件，可以使用[蓝奏云](https://www.lanzou.com/)进行存取，蓝奏云不限速。嗯，有钱人还是多支持下百度网盘吧😁。
+请前往 [该篇文章](https://crcrc.me/life/tools/pan/) 了解详情。
 
 ## 护眼
 
@@ -112,13 +94,44 @@ Good things worth sharing！
 
 这是一款集压缩、解压缩、浏览、编辑为一体的压缩包管理器，可解压包含 RAR、RAR5、7Z、ZIP 在内的 30 多种格式。此外它还能自动选择解压方式：若你的压缩包第一层只有一个文件或文件夹，它会直接解压，如果第一层有两个以上的文件，它便会创建一个文件夹，然后把文件解压在其中，如此便可以防止解压出的文件铺满桌面（我还真发生过这事😂）。
 
-## 图片处理
+## 网页推荐
 
-这里就简单的列举两个网站：
+### 万能命令
+
+在任意网页的网址前加上 `wn.run/`，然后回车即可发现新大陆。
+![wnrun_1](/images/分享/wnrun_1.png "加上")
+![wnrun_2](/images/分享/wnrun_2.png "可执行操作")
+
+### 高品质音乐免费下载
+
+网址：[点我](https://www.jbsou.cn/)
+
+### PDF
+
+分割 PDF：[点我](https://smallpdf.com/cn/split-pdf)
+转 PDF：[点我](https://app.xunjiepdf.com/word2pdf/)
+各种转：[点我](https://easypdf.com/cn)
+
+### 图片：
 
 尺寸处理：[点我](https://www.sojson.com/image/change.html)
 
 压缩处理：[点我](https://tinypng.com/)
 
 当然还能用 PS 实现尺寸处理及压缩，压缩还可通过微信传图实现。
+
+### LaTex
+手写体转 LaTex等：[点我](http://webdemo.myscript.com/views/math/index.html)
+
+### 壁纸
+
+P站出图（插画站）：
+* [点我](https://m.pixivic.com/dailyRank?VNK=cdd8010e)
+* [还有我](https://www.biacgn.com/archives/6046.html)
+
+试试这个？：[点我](https://www.wallpapermaiden.com)
+
+### PPT免费模板
+
+[点我](http://ppt.sotary.com/web/wxapp/index.html)
 
