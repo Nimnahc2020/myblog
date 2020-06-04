@@ -17,31 +17,51 @@
     padding: 16em 1em;
 }
 
-.life {
-    color: #f37055;
-}
-.tech {
-    color: #a166ab;
-}
-.about {
-    color: #07b39b;
+.menu-item {
+    .archives, .categories, .series, .share, .friends, .about {
+        display: none;
+    }
 }
 
-.menu-item .icon {
-    display: none;
+[data-theme="dark"] {
+    .theme-icon-dark, #lang-switcher, .footer-icon {
+        opacity: 0.5;
+    }
 }
+
+#lang-switcher {
+    margin-left: 0.3em;
+}
+
 
 @media (max-width: $maxWidth) {
     .nav {
         margin: 2em 0;
     }
-    .menu-item .icon {
-        display: inline-block;
+    .menu-item {
+        .archives, .categories, .series, .share, .friends, .about {
+            display: inline-block;
+        }
     }
     .menu-item-name {
         font-size: 80%;
     }
+
+    :root {
+        .theme-icon-light {
+            display: inline;
+        }
+    }
+    [data-theme="dark"] {
+        .theme-icon-dark {
+            display: inline !important;
+        }
+    }
+    #lang-switcher {
+        margin: 0;
+    }
 }
+
 
 .nav-toggle {
     transform: translateY(0.4em);
@@ -49,6 +69,12 @@
 
 .footer {
     letter-spacing: 0.1em;
+}
+
+// 搜索样式
+
+input#search-input {
+    font-family: "Amstelvar", serif;
 }
 
 //标签云
@@ -66,6 +92,13 @@
         border-bottom: 1px dotted var(--color-contrast-lower);
         transition: all .5s;
     }
+}
+
+// 相关文章
+
+.related-list {
+    padding-left: 2em;
+    list-style: circle;
 }
 
 // 删除线
@@ -106,12 +139,11 @@ del {
 // katex
 
 .katex {
-    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
+    font-size: 1em !important;
 }
 
 
 // 可变字体 https://github.com/TypeNetwork/Amstelvar
-// https://github.com/TypeNetwork/Amstelvar
 
 // Magic adjustment for en
 @if ($lineHeight != 2) {
@@ -133,6 +165,13 @@ del {
         font-stretch: 50% 125%;
         font-style: italic;
     }
+    @font-face {
+        font-family: 'JetBrains Mono';
+        font-display: swap;
+        src: url('../../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
 } @else {
     @font-face {
         font-family: 'Amstelvar';
@@ -152,21 +191,31 @@ del {
         font-stretch: 50% 125%;
         font-style: italic;
     }
+    @font-face {
+        font-family: 'JetBrains Mono';
+        font-display: swap;
+        src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
 }
-
 :root {
     --text-wdth: 90;
-    --text-opsz: 80;
+    --text-opsz: 40;
     --text-YTLC: 460;
 }
-
 body {
     font-variation-settings:
         'wdth' var(--text-wdth),
         'opsz' var(--text-opsz),
         'YTLC' var(--text-YTLC);
 }
-
+.post-title {
+    font-variation-settings:
+        'wght' 550,
+        'opsz' 60,
+        'YOPQ' 90;
+}
 .list-item-time {
     font-feature-settings: 'tnum';
 }
