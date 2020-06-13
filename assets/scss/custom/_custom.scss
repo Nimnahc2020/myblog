@@ -388,3 +388,12 @@ color: transparent;
     z-index: -1;
     margin: -30px;
 }
+
+/* 鼠标样式 */
+* {
+  cursor: url(/images/cur/Normal.cur),auto;
+}
+
+:link {
+  cursor: url(/images/cur/pointer.cur),auto
+}
