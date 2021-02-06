@@ -4,6 +4,7 @@ date: 2020-05-12T13:31:36+08:00
 dropCap: false
 gitinfo: true
 displayCopyright: false
+hrefTargetBlank: false
 ---
 <blockquote class="quote-center">
 <p>
@@ -15,16 +16,12 @@ Good things worth sharing！
 
 |        名称         |                    描述                     |                     地址                     |
 | :-----------------: | :-----------------------------------------: | :------------------------------------------: |
-|      网盘神器       | [点我呀](https://crcrc.me/share/#网盘神器)😛 | [传送门](https://crcrc.me/life/tools/pan/) |
 |        护眼         |   [在这呢](https://crcrc.me/share/#护眼)😊   | [传送门](https://ruchan.lanzous.com/icj76mb) |
 | 书籍格式转换 + 阅读 |    [看这](https://crcrc.me/share/#书籍)👈    |    [传送门](https://crcrc.me/share/#书籍)    |
 |  浏览器推荐 + 插件  |  [来看看](https://crcrc.me/share/#浏览器)👀  |   [传送门](https://crcrc.me/share/#浏览器)   |
 |      解压工具       |  [推荐](https://crcrc.me/share/#解压工具)✌️  |  [传送门](https://crcrc.me/share/#解压工具)  |
 |      网页推荐       |               PDF；图片；音乐；LaTex...              |  [传送门](https://crcrc.me/share/#网页推荐)  |
 
-## 网盘神器
-
-请前往 [该篇文章](https://crcrc.me/life/tools/pan/) 了解详情。
 
 ## 护眼
 
