@@ -6,10 +6,8 @@
   "devDependencies": {},
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "update-theme": "git submodule update --rebase --remote",
-    "build": "hugo --gc --minify --cleanDestinationDir",
-    "ipfs-deploy": "ipfs-deploy -p pinata public -u pinata -d cloudflare -C -O"
+    "build": "hugo --gc --minify --cleanDestinationDir"
   },
   "repository": {
     "type": "git",
