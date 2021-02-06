@@ -1,0 +1,27 @@
+# .github/workflows/build.yml
+
+name: build
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+    build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+    
+    - name: 'Building...'
+      uses: ./.github/actions/hugo-deploy
+      env:
+        DEPLOY_REPO: Nimnahc2020/Nimnahc2020.github.io
+        DEPLOY_BRANCH: master
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        TZ: Asia/Shanghai
