@@ -1,0 +1,119 @@
+//段落样式
+.post-body {
+    h2 {
+        border-bottom: 1px solid var(--color-contrast-lower);
+        transition: all .5s;
+    }
+    h3 {
+        border-bottom: 1px dotted var(--color-contrast-lower);
+        transition: all .5s;
+    }
+}
+
+// 相关文章
+
+.related-list {
+    padding-left: 2em;
+    list-style: circle;
+}
+
+// 删除线
+
+del {
+    --color: var(--color-contrast-medium);
+    text-decoration: none;
+    padding: 0.5em;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to left,rgba(255,255,255,0.5),transparent),linear-gradient(2deg,var(--color) 50%,transparent 50%),linear-gradient(-.9deg,var(--color) 50%,transparent 50%),linear-gradient(-60deg,var(--color) 50%,transparent 50%),linear-gradient(120deg,var(--color) 50%,transparent 50%);
+    background-size: 0% 1.5px, calc(100% - 20px) 10px, calc(100% - 20px) 10px, 10px 10px, 8px 8px;
+    background-position: 100% calc(50% + 2px), center center, center center, 2px 50%, calc(100% - 3px) calc(50% + 1px);
+}
+
+
+// 超链接
+
+.post-body {
+    p a, li a, dd a, sup a {
+        color: hsl(220, 50%, 50%);
+        text-decoration: none;
+        &:hover, &:active {
+            color: hsl(290, 50%, 50%);
+        }
+    }
+}
+[data-theme="dark"] .post-body {
+    p a, li a, dd a, sup a {
+        color: hsl(200, 40%, 60%);
+        text-decoration: none;
+        &:hover, &:active {
+            color: hsl(310, 40%, 60%);
+        }
+    }
+}
+
+// mermaid流程图
+
+.mermaid {
+    margin: 4em 0;
+    text-align: center;
+    overflow: auto hidden;
+    font-size: .75em;
+    svg{
+        width: 100%;
+        height: 100%;
+    } 
+}
+
+// katex
+
+.katex {
+    font-size: 1em !important;
+}
+
+// 代码高亮
+
+:root {
+    --chroma-deleted-color: #aa0000;
+    --chroma-inserted-color: #00aa00;
+}
+:root[data-theme="dark"] {
+    --chroma-deleted-color: #f92672;
+    --chroma-inserted-color: #a6e22e;
+}
+.chroma .gi {
+    color: var(--chroma-inserted-color);
+    font-weight: normal;
+}
+.chroma-dark .gi {
+    color: var(--chroma-inserted-color);
+    font-weight: normal;
+}
+
+// 文字渐变色
+.colorfulfont {
+background: linear-gradient(to right, red,#45ed63);
+-webkit-background-clip: text;
+color: transparent;
+}
+
+// 卡片风格
+.mytag{
+    position: relative;
+    left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 2;
+    margin: auto;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+.mytag::before{
+    content: '';
+    position: relative;
+    left: 0; right: 0;
+    filter: blur(20px);
+    z-index: -1;
+    margin: -30px;
+}

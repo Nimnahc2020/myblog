@@ -1,0 +1,82 @@
+.list-title, .term-title, .list-year, .list-month {
+    font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
+}
+// 弹性布局调整
+.brand {
+    font-family: 'Lobster', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.nav {
+    font-size: 1em;
+    margin-top: 0.4em;
+}
+
+.home .poetry {
+    padding: 16em 1em;
+}
+
+.menu-item {
+    .archives, .categories, .series, .share, .friends, .about {
+        display: none;
+    }
+}
+
+[data-theme="dark"] {
+    .theme-icon-dark, #lang-switcher, .footer-icon {
+        opacity: 0.5;
+    }
+}
+
+#lang-switcher {
+    margin-left: 0.3em;
+}
+
+
+@media (max-width: $maxWidth) {
+    .nav {
+        margin: 2em 0;
+    }
+    .menu-item {
+        .archives, .categories, .series, .share, .friends, .about {
+            display: inline-block;
+        }
+    }
+    .menu-item-name {
+        font-size: 80%;
+    }
+
+    :root {
+        .theme-icon-light {
+            display: inline;
+        }
+    }
+    [data-theme="dark"] {
+        .theme-icon-dark {
+            display: inline !important;
+        }
+    }
+    #lang-switcher {
+        margin: 0;
+    }
+}
+
+
+.nav-toggle {
+    transform: translateY(0.4em);
+}
+
+.footer {
+    letter-spacing: 0.1em;
+}
+
+// 搜索样式
+input#search-input {
+    font-family: "Amstelvar", serif;
+}
+
+//标签云
+.tag-cloud-item {
+    font-family: 'Cinzel Decorative', 'Long Cang', 'Noto Serif SC', serif;
+}
