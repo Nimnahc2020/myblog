@@ -390,10 +390,12 @@ color: transparent;
 }
 
 /* 鼠标样式 */
-* {
-  cursor: url(/images/cur/Normal.cur),auto;
-}
+/*
+	* {
+	  cursor: url(/images/cur/Normal.cur),auto;
+	}
 
-:link {
-  cursor: url(/images/cur/pointer.cur),auto
-}
+	:link {
+	  cursor: url(/images/cur/pointer.cur),auto
+	}
+*/

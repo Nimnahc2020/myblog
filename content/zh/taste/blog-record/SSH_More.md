@@ -46,7 +46,7 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 然后添加远程仓库关联：
 
 ```C
-$ git remote add origingit@github.com:Nimnahc2020/myblog.git
+$ git remote add origin git@github.com:Nimnahc2020/myblog.git
 ```
 
 注：如果你之前通过`git remote add` 添加了 Github 仓库的 HTTPS 地址[^2]，那么需要修改仓库的远程仓库链接地址为 SSH 地址，在..本地仓库文件..中打开 git bash，键入如下命令：
