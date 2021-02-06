@@ -2,10 +2,12 @@
 
 ## 博客
 
+<div align="center">
 [![Home](https://img.shields.io/badge/home-ruchan-aa96da)](https://crcrc.me)
 [![Built on GitHub](https://github.com/Nimnahc2020/myblog/workflows/build/badge.svg)](https://github.com/Nimnahc2020/myblog/actions)
 [![Generator is Hugo](https://img.shields.io/badge/Generator-Hugo-ff4088?&logo=hugo)](https://github.com/gohugoio/hugo)
 [![Theme is MemE](https://img.shields.io/badge/Theme-MemE-2a6df4)](https://github.com/reuixiy/hugo-theme-meme)
+</div>
 
 ## 文章
 
