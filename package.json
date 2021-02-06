@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Blog of ruchan",
   "main": "index.js",
-  "devDependencies": {
-    "ipfs-deploy": "^7.14.0"
-  },
+  "devDependencies": {},
   "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
