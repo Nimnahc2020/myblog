@@ -4,7 +4,6 @@ date: 2020-05-12T13:31:36+08:00
 dropCap: false
 gitinfo: true
 displayCopyright: false
-hrefTargetBlank: false
 ---
 <blockquote class="quote-center">
 <p>
