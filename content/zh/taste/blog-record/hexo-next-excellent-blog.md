@@ -206,7 +206,7 @@ Github 在国内的访问速度以前的确很慢，但近来 Github 表示要�
 
 同样，首先在 Github 上新建一个仓库，这个仓库名可随意取，比如我取的是`myblog`。
 
-接着把本地仓库上传至 Github 的`myblog`中，这里我采用的是 SSH 连接方式，相关方法可浏览我写的一篇文章：[SSH 之 Github（单/多账号）](https://crcrc.me/taste/建站笔记/hugo_hexo/)。
+接着把本地仓库上传至 Github 的`myblog`中，这里我采用的是 SSH 连接方式，相关方法可浏览我写的一篇文章：[SSH 之 Github（单/多账号）](https://crcrc.me/taste/blog-record/ssh_more/)。
 
 先 Git 初始化根目录：（把根目录变成一个本地仓库→生成`.git`）
 
@@ -290,7 +290,7 @@ Next 主题在 Github 上有两个仓库。一个是 `v 6.0.0` 之前版本的[�
 
 由于 Next 主题经常更新，故建议利用子模块[^2]来添加 Next 主题，这样有利于跟进主题的更新。
 ```C
-$ git submodule add --depth 1 https://github.com/theme-next/hexo-theme-next.git themes/next
+$ git submodule add --depth 1 https://github.com/next-theme/hexo-theme-next.git themes/next
 ```
 执行完后会在 themes 文件家下生成 next 文件，next 文件中便存放着 Next 主题的所有相关文件。
 
@@ -501,7 +501,7 @@ theme_config:
 .....
 ```
 
-因主题配置文件太长，故在此只展现一部分，完整的配置文件请前往[代码仓库](https://github.com/WillCAI2020/WillCAI2020.github.io/blob/hexo/_config.yml)获取。
+因主题配置文件太长，故在此只展现一部分，完整的配置文件请前往[代码仓库](https://github.com/WillCAI2020/blog/blob/main/_config.yml)获取。
 
 由于 NexT 主题有很多扩展功能，故其配置文件内容有很多，所以本文也只展示有关优化的相关配置。具体参数介绍请查看[官方文档](https://theme-next.js.org/docs/theme-settings/)（英文说明），进行其他设置时遇到问题，可采用 Google 大法。对于更新主题后的变动，可浏览这个[官方文档](https://theme-next.js.org/)获悉相关设置。
 
